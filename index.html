@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#040A13">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Nawaz | GIS Analyst, Zoning Analyst, Remote Sensing Specialist, Geospatial Data Analyst</title>
+<meta name="description" content="Portfolio of Ali Nawaz: zoning and parcel data, geospatial analysis, remote sensing and GIS automation. Maps, projects, code and experience.">
+<meta property="og:title" content="Ali Nawaz | GIS Analyst">
+<meta property="og:description" content="Zoning data, spatial analysis, remote sensing and GIS automation.">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%97%BA%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#040A13;--panel:rgba(10,24,40,.62);--ink:#E7F2F8;--muted:#93A9BA;--line:rgba(110,210,235,.16);--teal:#22D3EE;--moss:#34D399;--amber:#FBBF24;--plum:#A78BFA;--tealink:#67E8F9;
+  --shadow:0 10px 40px rgba(0,0,0,.45);--head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Public Sans","Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;pointer-events:none;-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.fig,.sheet,.lb,.about .side{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+@media print{img,.fig,.sheet,.lb,.about .side{display:none!important}}
+a{color:var(--tealink)} a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0;letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:.4rem}
+h3{font-size:1.3rem;font-weight:600;letter-spacing:-.005em;line-height:1.25}
+p{margin:.6rem 0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+.lede{color:var(--muted);max-width:62ch;margin-bottom:2rem}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:.5rem .8rem;border-radius:6px;z-index:99}
+.skip:focus{left:8px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:58px}
+.brand{white-space:nowrap;font:800 1.05rem var(--head);color:var(--ink);text-decoration:none}
+.nav nav{min-width:0;overflow-x:auto;scrollbar-width:none}
+.nav ul{display:flex;gap:1.1rem;list-style:none;margin:0;padding:0}
+.nav li a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.nav li a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:3.5rem 0 4rem;border-top:0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:800}
+.roles{list-style:none;margin:1.6rem 0 0;padding:0;border:1.5px solid var(--ink);border-radius:6px;background:var(--panel);max-width:30rem}
+.roles li{display:flex;align-items:center;gap:.9rem;padding:.55rem .9rem;font:600 1.15rem var(--head);color:var(--muted);border-bottom:1px solid var(--line);transition:color .25s, background .25s}
+.roles li:last-child{border-bottom:0}
+.roles .sw{width:2.1rem;height:1.05rem;border:1.5px solid var(--c);background:transparent;border-radius:2px;flex:none;transition:background .25s}
+.roles li[aria-current="true"]{color:var(--ink);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.roles li[aria-current="true"] .sw{background:var(--c)}
+.roles li:nth-child(1){--c:var(--teal)} .roles li:nth-child(2){--c:var(--moss)} .roles li:nth-child(3){--c:var(--amber)} .roles li:nth-child(4){--c:var(--plum)}
+.roles.cycle li{display:none;font-size:1.6rem;padding:1rem 1.1rem;color:var(--ink);border-bottom:0}
+.roles.cycle li[aria-current="true"]{display:flex;animation:titlein .5s ease}
+@keyframes titlein{from{opacity:0;transform:translateY(.5rem)}to{opacity:1;transform:none}}
+.intro{max-width:52ch;margin-top:1.6rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.sheet{margin:0;padding:.7rem;background:var(--panel);border:1.5px solid var(--ink);box-shadow:var(--shadow)}
+.sheet .stage{position:relative;aspect-ratio:4/3;background:#fff;border:1px solid var(--line)}
+.sheet .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border:0;opacity:0;transition:opacity .35s ease}
+.sheet .stage img.on{opacity:1}
+
+.sheet figcaption{font-size:.85rem;color:var(--muted);padding-top:.5rem}
+
+/* stats */
+.stats{padding:0;border-top:1px solid var(--line);background:var(--panel)}
+.stats dl{display:grid;grid-template-columns:repeat(4,1fr);margin:0}
+.stats div{padding:1.6rem 1.25rem;border-left:1px solid var(--line)}
+.stats div:first-child{border-left:0}
+.stats dt{font:800 2.4rem var(--head);line-height:1}
+.stats dd{margin:.4rem 0 0;color:var(--muted);font-size:.95rem;line-height:1.4}
+
+/* about */
+.about{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:start}
+.portrait{width:100%;height:auto;border:1.5px solid var(--ink);border-radius:8px}
+.about .side{display:grid;gap:1rem;justify-items:center}
+.about .side .fig{width:150px}
+.side small{color:var(--muted);text-align:center}
+.about-text p{max-width:68ch}
+
+/* experience */
+.job{padding:2rem 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:.5rem}
+.job .meta{color:var(--muted);margin:.2rem 0 .8rem}
+.job ul{padding-left:1.2rem;max-width:76ch;margin:.5rem 0}
+.job li{margin:.35rem 0}
+details.more{margin-top:1rem}
+summary{cursor:pointer;font-weight:600;color:var(--tealink)}
+
+/* galleries */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem;margin-top:1rem}
+.gallery.small{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.fig{padding:0;border:1px solid var(--line);background:var(--panel);cursor:zoom-in;overflow:hidden;border-radius:4px;aspect-ratio:4/3;display:block}
+.fig img{width:100%;height:100%;object-fit:cover;object-position:top}
+.fig:hover{border-color:var(--teal)}
+.gallery.lead1{grid-template-columns:repeat(4,1fr)}
+.gallery.lead1 .lead{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+
+/* expertise */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;margin:0}
+.skills div{padding:1rem 0;border-top:1px solid var(--line)}
+.skills dt{font:600 1.05rem var(--head)} .skills dd{margin:.2rem 0 0;color:var(--muted)}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:3rem}
+.ev p{color:var(--muted);margin-top:.2rem}
+.code{margin-top:3rem}
+.code ul{list-style:none;padding:0;margin:1rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:.2rem 2rem}
+.code li{padding:.7rem 0;border-top:1px solid var(--line);display:flex;flex-direction:column}
+.code span{color:var(--muted);font-size:.95rem}
+.code a{font-weight:600;word-break:break-all}
+
+/* projects */
+.proj{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr);gap:2.2rem;padding:2.4rem 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0}
+.proj .gallery{margin-top:0;align-content:start}
+.kind{color:var(--teal);font-weight:600;font-size:.95rem;margin:0 0 .3rem}
+.tools{color:var(--muted);font-size:.95rem;border-left:3px solid var(--line);padding-left:.8rem}
+details.res{border-top:1px solid var(--line);padding:1rem 0}
+details.res summary{display:flex;justify-content:space-between;gap:1rem;font:600 1.25rem var(--head);color:var(--ink)}
+details.res small{font:400 .95rem var(--body);color:var(--muted)}
+
+/* edu + certs */
+.edu{list-style:none;padding:0;margin:0 0 3rem}
+.edu li{display:grid;grid-template-columns:1.2fr 1.4fr auto;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.edu span{color:var(--muted)} .edu em{font-style:normal;color:var(--muted)}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.certs figure{margin:0}
+.certs .fig{aspect-ratio:4/3;width:100%}
+.certs figcaption{font-size:.92rem;color:var(--muted);margin-top:.5rem}
+.pdfcert{border:1px solid var(--line);background:var(--panel);padding:1rem 1.2rem;border-radius:4px;align-self:start}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact dl{margin:0} .contact dt{font-weight:600;margin-top:1rem} .contact dd{margin:.1rem 0 0}
+.contact .big{font:800 clamp(1.6rem,3.6vw,2.4rem) var(--head);word-break:break-word}
+footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);width:100%;max-height:96vh;color:#fff;overflow:visible}
+dialog::backdrop{background:rgba(6,14,22,.88)}
+.lb{display:grid;gap:.6rem;justify-items:center}
+.lb .view{width:min(96vw,1400px);height:78vh;background:center/contain no-repeat;border-radius:4px}
+.lb p{margin:0;text-align:center;font-size:.98rem}
+.lb .bar{display:flex;gap:.6rem}
+.lb button{font:600 .95rem var(--body);padding:.55rem 1rem;border-radius:6px;border:1.5px solid #fff;background:transparent;color:#fff;cursor:pointer}
+.lb button:hover{background:#fff;color:#12263A}
+
+@media (max-width:860px){
+  .hero .wrap,.about,.proj,.contact,.evidence,.skills,.code ul{grid-template-columns:1fr}
+  .hero .wrap{gap:2rem} .about .side{grid-template-columns:auto auto;justify-content:start;justify-items:start;align-items:center}
+  .portrait{width:200px}
+  .stats dl{grid-template-columns:1fr 1fr} .stats div:nth-child(3){border-left:0} .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+  .gallery.lead1{grid-template-columns:repeat(2,1fr)} .certs{grid-template-columns:1fr}
+  .edu li{grid-template-columns:1fr}
+  section{padding:3.2rem 0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* ===== GeoAI / Earth-observation upgrade ===== */
+html{background:#040A13}
+body{background:transparent;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:#040A13;background-image:
+ radial-gradient(1200px 700px at 80% -10%,rgba(34,211,238,.15),transparent 60%),
+ radial-gradient(900px 600px at -5% 45%,rgba(52,211,153,.08),transparent 60%),
+ radial-gradient(1px 1px at 18px 26px,rgba(255,255,255,.75),transparent),
+ radial-gradient(1px 1px at 120px 90px,rgba(180,240,255,.6),transparent),
+ radial-gradient(1.4px 1.4px at 210px 40px,rgba(255,255,255,.5),transparent),
+ radial-gradient(1px 1px at 60px 170px,rgba(255,255,255,.45),transparent),
+ radial-gradient(1px 1px at 250px 200px,rgba(160,255,220,.5),transparent);
+ background-size:auto,auto,280px 240px,280px 240px,280px 240px,280px 240px,280px 240px;
+ background-position:0 0,0 0,0 var(--sy,0px),0 var(--sy,0px),0 var(--sy,0px),0 var(--sy,0px),0 var(--sy,0px)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.7;
+ background-image:linear-gradient(rgba(90,210,235,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(90,210,235,.05) 1px,transparent 1px);
+ background-size:84px 84px;-webkit-mask-image:radial-gradient(ellipse at 70% 20%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 70% 20%,#000,transparent 75%)}
+.glass{background:var(--panel);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--shadow)}
+section{border-top:1px solid var(--line)}
+h2::after{content:"";display:block;width:56px;height:3px;margin-top:.6rem;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--moss))}
+.nav{background:rgba(4,10,19,.72)}
+.nav li a:hover{color:var(--tealink)}
+.brand{background:linear-gradient(95deg,#fff,#7DE9F8);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:4rem 0 5.5rem}
+.badge{display:inline-flex;gap:.6rem;align-items:center;font:500 .8rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--tealink);border:1px solid var(--line);background:rgba(34,211,238,.07);padding:.4rem .85rem;border-radius:14px;line-height:1.5;margin:0 0 1.2rem}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--moss);box-shadow:0 0 10px var(--moss);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.hero h1{background:linear-gradient(95deg,#fff 12%,#8BEBFA 58%,#6EE7B7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.roles{border:1px solid rgba(34,211,238,.5);background:rgba(8,22,38,.7);box-shadow:0 0 0 1px rgba(34,211,238,.1),0 0 32px rgba(34,211,238,.16);border-radius:10px;backdrop-filter:blur(8px)}
+.btn{border:1px solid rgba(34,211,238,.5);border-radius:10px;color:var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 26px rgba(34,211,238,.35);background:rgba(34,211,238,.14);border-color:var(--teal);color:#fff}
+.btn.primary{background:linear-gradient(95deg,#22D3EE,#34D399);color:#031018;border-color:transparent}
+.btn.primary:hover{background:linear-gradient(95deg,#5EEAF8,#6EE7B7);color:#031018}
+.globewrap{position:relative;padding-bottom:9%;transform:translateY(var(--gy,0px))}
+.globewrap.ok::before{display:none}
+.globewrap::before{content:"";position:absolute;left:14%;right:14%;top:3%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#0d3a55,#04121f 70%);box-shadow:0 0 90px rgba(34,211,238,.25)}
+#globe{position:relative;display:block;width:100%;aspect-ratio:1;touch-action:pan-y;cursor:grab}
+#globe:active{cursor:grabbing}
+.readout{position:absolute;right:1%;top:3%;font:500 .72rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--tealink);text-align:right;opacity:.85;pointer-events:none}
+.feed{position:absolute;left:-12%;bottom:0;width:60%;margin:0;padding:.55rem;border-radius:12px;border:1px solid rgba(34,211,238,.45);background:rgba(6,18,32,.8);backdrop-filter:blur(10px);box-shadow:0 0 0 1px rgba(34,211,238,.1),0 0 34px rgba(34,211,238,.2),var(--shadow)}
+.feed figcaption{color:var(--ink);font-size:.8rem;padding-top:.45rem}
+.sheet .stage{border-radius:6px;overflow:hidden;border-color:rgba(34,211,238,.3)}
+.sheet .stage::before{content:"MAP FEED";position:absolute;z-index:3;left:8px;top:8px;font:600 .6rem ui-monospace,monospace;letter-spacing:.12em;padding:.15rem .45rem;border-radius:4px;background:rgba(3,16,24,.78);color:var(--moss)}
+.sheet .stage::after{content:"";position:absolute;left:0;right:0;height:26%;top:-26%;z-index:2;pointer-events:none;background:linear-gradient(transparent,rgba(34,211,238,.26));border-bottom:1px solid rgba(34,211,238,.7);animation:vscan 3.4s linear infinite}
+@keyframes vscan{to{top:100%}}
+.stats{background:rgba(8,20,34,.55);backdrop-filter:blur(10px)}
+.stats dt{background:linear-gradient(95deg,#fff,#7DE9F8);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* about / experience / expertise */
+.portrait{border:1px solid rgba(34,211,238,.55);box-shadow:0 0 36px rgba(34,211,238,.2)}
+.job{position:relative;border-top:0!important;padding:1.4rem 0 1.4rem 1.6rem;border-left:2px solid rgba(34,211,238,.3)}
+.job::before{content:"";position:absolute;left:-7px;top:1.9rem;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 14px var(--teal)}
+.skills div{transition:border-color .3s,background .3s;padding:1rem .8rem}
+.skills div:hover{border-top-color:var(--teal);background:rgba(34,211,238,.05)}
+.ev,details.res{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
+details.res{margin:.8rem 0;transition:border-color .3s}
+details.res:hover,.ev:hover{border-color:rgba(34,211,238,.45)}
+.code li{transition:background .3s}.code li:hover{background:rgba(34,211,238,.05)}
+
+/* labs: zoning, remote sensing, automation */
+.lab-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center;margin-top:1.6rem}
+.mapbox{position:relative;overflow:hidden;padding:0}
+.mapbox svg,.mapbox canvas{display:block;width:100%;height:auto}
+.mapbox .tag{position:absolute;left:10px;bottom:10px;font:500 .66rem ui-monospace,monospace;color:var(--tealink);background:rgba(3,14,24,.8);padding:.2rem .55rem;border-radius:4px}
+.sweep{position:absolute;top:0;bottom:0;left:0;width:2px;background:var(--teal);box-shadow:0 0 18px 4px rgba(34,211,238,.55);pointer-events:none;animation:hsweep 9s linear infinite}
+.sweep.fast{animation-duration:4.5s}
+@keyframes hsweep{0%{left:0;opacity:1}40%{left:100%;opacity:1}41%,100%{left:100%;opacity:0}}
+.zsvg .bg{fill:#071626}
+.zp{fill:var(--zc);fill-opacity:0;stroke:rgba(125,225,245,.55);stroke-width:1;animation:zcls 9s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes zcls{0%{fill-opacity:0}8%,62%{fill-opacity:.62}80%,100%{fill-opacity:0}}
+.z-R1{--zc:#5EA8FF}.z-R2{--zc:#22D3EE}.z-C{--zc:#FBBF24}.z-I{--zc:#A78BFA}.z-OS{--zc:#34D399}
+.zsvg[data-f] .zp{animation:none;fill-opacity:.08;stroke-opacity:.25}
+.zsvg[data-f=R1] .z-R1,.zsvg[data-f=R2] .z-R2,.zsvg[data-f=C] .z-C,.zsvg[data-f=I] .z-I,.zsvg[data-f=OS] .z-OS{fill-opacity:.85;stroke-opacity:1}
+.zleg{list-style:none;padding:0;margin:0 0 1.2rem;display:grid;gap:.45rem}
+.zleg button,.chips button{font:600 .92rem var(--body);color:var(--ink);background:rgba(10,28,46,.7);border:1px solid var(--line);border-radius:10px;padding:.55rem .9rem;cursor:pointer;display:flex;align-items:center;gap:.7rem;width:100%;text-align:left;transition:border-color .25s,background .25s,transform .25s}
+.zleg button:hover,.zleg button[aria-pressed=true],.chips button:hover,.chips button.on{border-color:var(--teal);background:rgba(34,211,238,.13);transform:translateX(3px)}
+.zleg i{width:1.3rem;height:.8rem;border-radius:2px;background:var(--zc);box-shadow:0 0 10px var(--zc)}
+.steps{margin:0 0 1rem;padding-left:1.2rem;color:var(--muted)}.steps li{margin:.25rem 0}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:1rem}.chips button{justify-content:center;text-align:center}
+.chips button:hover,.chips button.on{transform:none}
+#rsnote{min-height:5.2em;color:var(--muted);margin:.2rem 0 1rem}
+#rsleg{height:12px;border-radius:6px;border:1px solid var(--line)}
+#rsleg.cat{display:flex;height:auto;gap:.9rem;flex-wrap:wrap;border:0;font-size:.82rem;color:var(--muted)}#rsleg.cat i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem}
+.rsl{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-top:.25rem}
+.real{margin-top:2.4rem}.real h3{margin-bottom:.2rem}.real .lede{margin-bottom:0}
+.flow{padding:1rem;margin-top:1.6rem}.flow svg{display:block;width:100%;height:auto}
+.edge{fill:none;stroke:rgba(34,211,238,.35);stroke-width:2;stroke-dasharray:5 6}
+.pt{fill:#6EE7B7;filter:drop-shadow(0 0 5px #34D399)}
+.node{cursor:pointer;outline:0}.node rect{fill:rgba(9,26,44,.95);stroke:rgba(34,211,238,.4);stroke-width:1.5;transition:stroke .3s,fill .3s}
+.node:hover rect,.node:focus rect{stroke:var(--teal)}
+.node.on rect{stroke:var(--moss);fill:rgba(14,52,60,.95);filter:drop-shadow(0 0 12px rgba(52,211,153,.55))}
+.node text{fill:var(--ink);text-anchor:middle;font-family:var(--body)}.node .t1{font-weight:600;font-size:16px}.node .t2{fill:var(--muted);font-size:12.5px}.node .nm{fill:var(--tealink);font:600 11px ui-monospace,monospace;text-anchor:start}
+#flowinfo{padding:1.4rem 1.5rem;min-height:11rem}#flowinfo h3{color:var(--tealink)}#flowinfo p{color:var(--muted)}
+.log{margin:0;padding:1.1rem 1.3rem;font:.8rem/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--tealink);min-height:11rem;white-space:pre-wrap;overflow:hidden}
+.log b{color:var(--moss);font-weight:500}.log em{color:var(--amber);font-style:normal}
+.log small{display:block;color:var(--muted);font-size:.7rem;margin-bottom:.4rem}
+
+/* project cards, gallery */
+.proj{background:var(--panel);border:1px solid var(--line)!important;border-radius:16px;padding:1.6rem;margin:1.3rem 0;backdrop-filter:blur(10px);transition:transform .35s,border-color .35s,box-shadow .35s}
+.proj:hover{transform:translateY(-3px);border-color:rgba(34,211,238,.5)!important;box-shadow:0 0 36px rgba(34,211,238,.14),var(--shadow)}
+.fig{position:relative;border-radius:8px;background:repeating-linear-gradient(45deg,#0a1b2c,#0a1b2c 8px,#0c2236 8px,#0c2236 16px);transition:border-color .3s,box-shadow .3s}
+.fig img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.fig:hover{border-color:var(--teal);box-shadow:0 0 22px rgba(34,211,238,.28)}.fig:hover img{transform:scale(1.07)}
+.fig img.miss{display:none}
+.fig::after{content:attr(data-cap);position:absolute;left:0;right:0;bottom:0;padding:1.4rem .6rem .5rem;font:500 .74rem/1.25 var(--body);color:#fff;text-align:left;background:linear-gradient(transparent,rgba(2,8,16,.92));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.fig:hover::after,.fig:focus-visible::after{opacity:1;transform:none}
+.tools{border-left-color:var(--teal)}
+.certs figure,.contact dl{transition:transform .3s}
+.contact{padding:2rem;background:var(--panel);border:1px solid var(--line);border-radius:18px}
+.contact .big a{background:linear-gradient(95deg,#fff,#7DE9F8 60%,#6EE7B7);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
+.lb .det{max-width:min(92vw,900px);font-size:.88rem;color:#B9CCD9;text-align:center}.lb .det strong{color:#fff}
+.lb .view{height:70vh}
+dialog::backdrop{background:rgba(2,8,16,.92);backdrop-filter:blur(6px)}
+.lb button{border-color:rgba(34,211,238,.6)}.lb button:hover{background:var(--teal);color:#031018;border-color:var(--teal)}
+footer{background:rgba(4,10,19,.6)}
+
+/* scroll reveal (hidden state only when JS is running; always recovers after 3s) */
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;transition-delay:calc(var(--i,0)*70ms)}
+html.js .rv.in{opacity:1;transform:none}
+html.js .rv:not(.in){animation:rvsafe .01s 3.5s forwards}
+@keyframes rvsafe{to{opacity:1;transform:none}}
+
+@media (max-width:860px){
+ .lab-grid{grid-template-columns:1fr}
+ .globewrap{padding-bottom:0}.readout{display:none}
+ .feed{position:relative;left:auto;width:82%;margin:-12% 0 0 auto}
+ .contact{padding:1.2rem}
+ .chips{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+ .zp,.sweep,.sheet .stage::after,.badge i{animation:none!important}
+ html.js .rv{opacity:1;transform:none;transition:none}
+ .globewrap{transform:none}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Ali Nawaz</a>
+  <nav aria-label="Sections"><ul>
+    <li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#expertise">Expertise</a></li>
+    <li><a href="#zoning">Zoning</a></li><li><a href="#remote">Remote Sensing</a></li><li><a href="#automation">Automation</a></li><li><a href="#projects">Projects</a></li><li><a href="#research">Research</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav>
+</div></header>
+
+<main id="main">
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <p class="badge"><i></i>Geospatial analysis &middot; Earth observation &middot; Remote Sensing &middot; Zoning &amp; Land Use Data</p>
+    <h1>Ali Nawaz</h1>
+    <ol class="roles" id="roles" aria-label="Professional titles">
+      <li aria-current="true"><span class="sw"></span>GIS Analyst</li>
+      <li><span class="sw"></span>Zoning Analyst</li>
+      <li><span class="sw"></span>Remote Sensing Specialist</li>
+      <li><span class="sw"></span>Geospatial Data Analyst</li>
+    </ol>
+    <p class="intro">I turn complex zoning, parcel, satellite, and remote sensing data into accurate, decision-ready maps and datasets. I also develop Python tools to automate geospatial workflows, improve data accuracy, and make spatial analysis faster and more reliable.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See projects</a>
+      <a class="btn" href="Ali_Nawaz_CV.pdf">Download CV</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </div>
+  <div class="globewrap"><canvas id="globe" role="img" aria-label="Rotating 3D globe with satellite orbits and data links between Peshawar, Ontario, London and Somalia. Drag to rotate."></canvas><div class="readout" id="readout" aria-hidden="true"></div><figure class="sheet feed"><div class="stage" id="stage"><img class="slide on" src="assets/3-projects-2-somalia-project-kurman-v-flood-susceptibility-map.webp" alt="Kurman Valley, Somalia: flood susceptibility" data-cap="Kurman Valley, Somalia: flood susceptibility" width="5500" height="4250"><img class="slide" src="assets/5-gis-and-remote-sensing-analysis-res-lst-2025.webp" alt="Peshawar Valley: land surface temperature, 2025" data-cap="Peshawar Valley: land surface temperature, 2025" loading="lazy" width="4675" height="3612"><img class="slide" src="assets/3-projects-7-land-use-land-cover-swabi-change-detection-2002-2022.webp" alt="Swabi District: land cover change, 2002 to 2022" data-cap="Swabi District: land cover change, 2002 to 2022" loading="lazy" width="954" height="670"><img class="slide" src="assets/3-projects-1-uk-project-comparative-a-hackney-amenities-services-map.webp" alt="Hackney, UK: amenities and services around a school" data-cap="Hackney, UK: amenities and services around a school" loading="lazy" width="5445" height="4208"><img class="slide" src="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-caledon-town-ontario-ca.webp" alt="Caledon, Ontario: land use map digitization" data-cap="Caledon, Ontario: land use map digitization" loading="lazy" width="5500" height="4250"><img class="slide" src="assets/3-projects-4-snow-cover-of-batura-glac-snow-cover-from-2004-2024-combine.webp" alt="Batura Glacier, Pakistan: snow cover, 2004 to 2024" data-cap="Batura Glacier, Pakistan: snow cover, 2004 to 2024" loading="lazy" width="4400" height="3400"><img class="slide" src="assets/3-projects-6-spatial-distribution-of-e-spatial-distribution-overlay.webp" alt="Mouza Taru, Nowshera: encroachment on state land" data-cap="Mouza Taru, Nowshera: encroachment on state land" loading="lazy" width="5060" height="3910"><img class="slide" src="assets/3-projects-5-post-graduate-diploma-gis-suitable-lands-for-university-on-canada.webp" alt="Ontario, Canada: suitable lands for a university site" data-cap="Ontario, Canada: suitable lands for a university site" loading="lazy" width="4279" height="3306"><img class="slide" src="assets/5-gis-and-remote-sensing-analysis-res-hazard-map.webp" alt="Bagh District, AJK: hazard map" data-cap="Bagh District, AJK: hazard map" loading="lazy" width="5445" height="4208"></div>
+    <figcaption id="stagecap">Kurman Valley, Somalia: flood susceptibility</figcaption></figure></div>
+</div></section>
+
+<section class="stats" aria-label="Key numbers"><div class="wrap"><dl>
+  <div><dt>1,500+</dt><dd>zoning and parcel maps digitized and quality-assured</dd></div>
+  <div><dt>95%+</dt><dd>accuracy across project deliverables</dd></div>
+  <div><dt>2,000+</dt><dd>cities researched for current zoning and parcel sources</dd></div>
+  <div><dt>2023</dt><dd>working in GIS professionally since</dd></div>
+</dl></div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="side"><img class="portrait" src="assets/profile.webp" srcset="assets/profile-s.webp 400w, assets/profile.webp 900w" sizes="260px" alt="Portrait of Ali Nawaz" width="720" height="720">
+    <div><button type="button" class="fig " data-set="about" data-full="assets/-my-first-map-in-career.webp" data-cap="My First Map in Career"><img src="assets/-my-first-map-in-career-t.webp" alt="My First Map in Career" width="480" height="640" loading="lazy" decoding="async"></button><small>My first map</small></div></div>
+  <div class="about-text">
+    <h2>About</h2>
+    <p>I'm a GIS Analyst specializing in geospatial analysis, remote sensing, zoning, land use planning and GIS automation. I hold an MS in Geomatics (GIS and Remote Sensing) from the University of Peshawar, a Bachelor's degree in Geography and a Post-Graduate Diploma in Geomatics.</p>
+    <p>At Nook Office Solutions I handle zoning and parcel data, georeferencing, digitization, spatial QA/QC, web map research and GIS data extraction. Earlier, at HP Consultant Planners, I worked on master planning and land-use planning projects, and at the Excise and Taxation Department and the Board of Revenue I digitized parcels and cadastral maps.</p>
+    <p>A large part of my work is making GIS faster. I use Python and AI-assisted development to build tools for CRS correction, geometry validation, zone-change detection, sliver and overlap checks, and a REST spatial-data downloader that exports ArcGIS services to GeoJSON and GeoPackage.</p>
+    <p>I want to work on geospatial projects where spatial data and careful analysis help planning, environmental management and decisions.</p>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <p class="lede">Open the work samples under each role to see screenshots from the work itself.</p>
+  <article class="job"><div class="job-head"><h3>GIS Analyst, Nook Office Solutions</h3><p class="meta">Islamabad, Pakistan. October 2025 to present</p></div><ul><li>Georeferenced zoning maps and imagery with suitable spatial reference systems and RMS-error control, and ran production QA for topology errors, slivers, gaps, overlaps and invalid geometries.</li><li>Digitized and quality-assured 1,500+ zoning and parcel maps at 95%+ accuracy.</li><li>Researched municipal and county GIS portals, ArcGIS REST Feature Services and web mapping platforms, and documented updated zoning and parcel source links for 2,000+ cities at a 92.2% KPI.</li><li>Built Python/GIS tools for CRS correction, geometry validation, zone-change detection, sliver and overlap identification, and attribute, spelling, missing-field and gap checks.</li><li>Built a REST spatial-data downloader that turns GIS service endpoints into local GeoJSON and GeoPackage files, and a scraping utility that finds city-level GIS directories, mapping portals and REST services.</li><li>Used PostGIS and QGIS for local spatial database work: importing shapefiles, spatial intersections and selections, inserts, updates and deletes.</li><li>Validated zoning symbology against raster/TIFF reference datasets.</li><li>Audited new team members&#x27; digitization work and gave feedback on spatial and attribute errors.</li><li>Named Employee of the Month (August) for accuracy, productivity and output.</li></ul><details class="more"><summary>Work samples (14)</summary><div class="gallery work"><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-california-specific-plan-checking-with-scrap-file.webp" data-cap="California specific plans checked against a scrape file"><img src="assets/2-experience-nook-office-solution-islam-california-specific-plan-checking-with-scrap-file-t.webp" alt="California specific plans checked against a scrape file" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-california-specific-plans.webp" data-cap="California Specific Plans"><img src="assets/2-experience-nook-office-solution-islam-california-specific-plans-t.webp" alt="California Specific Plans" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-checking-updation-by-symbology.webp" data-cap="Checking zone updates against map symbology"><img src="assets/2-experience-nook-office-solution-islam-checking-updation-by-symbology-t.webp" alt="Checking zone updates against map symbology" width="640" height="399" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-checking-zone-codes-with-updated-ordinance.webp" data-cap="Checking zone codes against the updated ordinance"><img src="assets/2-experience-nook-office-solution-islam-checking-zone-codes-with-updated-ordinance-t.webp" alt="Checking zone codes against the updated ordinance" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-confirming-specific-plan-codes.webp" data-cap="Confirming specific plan codes"><img src="assets/2-experience-nook-office-solution-islam-confirming-specific-plan-codes-t.webp" alt="Confirming specific plan codes" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-data-checking-cleaning-based-on-standards.webp" data-cap="Data Checking &amp; Cleaning Based on Standards"><img src="assets/2-experience-nook-office-solution-islam-data-checking-cleaning-based-on-standards-t.webp" alt="Data Checking &amp; Cleaning Based on Standards" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-map-updation-using-visualization-pdf.webp" data-cap="Updating a zoning map from a visualization PDF"><img src="assets/2-experience-nook-office-solution-islam-map-updation-using-visualization-pdf-t.webp" alt="Updating a zoning map from a visualization PDF" width="640" height="337" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-matching-zone-code-with-ordinance.webp" data-cap="Matching zone codes with the ordinance"><img src="assets/2-experience-nook-office-solution-islam-matching-zone-code-with-ordinance-t.webp" alt="Matching zone codes with the ordinance" width="640" height="338" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-overlay-zoning-confirming.webp" data-cap="Confirming overlay zoning"><img src="assets/2-experience-nook-office-solution-islam-overlay-zoning-confirming-t.webp" alt="Confirming overlay zoning" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-scrap-file-zone-field-cleaning.webp" data-cap="Cleaning zone fields in a scraped file"><img src="assets/2-experience-nook-office-solution-islam-scrap-file-zone-field-cleaning-t.webp" alt="Cleaning zone fields in a scraped file" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-take-some-help-with-ai-and-less-workload-by-ai.webp" data-cap="AI-assisted workflow to cut manual workload"><img src="assets/2-experience-nook-office-solution-islam-take-some-help-with-ai-and-less-workload-by-ai-t.webp" alt="AI-assisted workflow to cut manual workload" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-web-maps-scraping.webp" data-cap="Web-map scraping"><img src="assets/2-experience-nook-office-solution-islam-web-maps-scraping-t.webp" alt="Web-map scraping" width="640" height="263" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-zoning-map-and-ordinance.webp" data-cap="Zoning map and ordinance side by side"><img src="assets/2-experience-nook-office-solution-islam-zoning-map-and-ordinance-t.webp" alt="Zoning map and ordinance side by side" width="640" height="195" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="nook" data-full="assets/2-experience-nook-office-solution-islam-zoning-scrapi-g-techniques.webp" data-cap="Zoning web-map scraping techniques"><img src="assets/2-experience-nook-office-solution-islam-zoning-scrapi-g-techniques-t.webp" alt="Zoning web-map scraping techniques" width="640" height="381" loading="lazy" decoding="async"></button></div></details></article><article class="job"><div class="job-head"><h3>GIS Analyst, HP Consultant Planners</h3><p class="meta">Peshawar, KP. October 2023 to October 2025</p></div><ul><li>Worked on GIS-based master planning and land-use planning projects, turning planning data into clear maps.</li><li>Collected spatial information through field surveys and existing datasets for planning studies.</li><li>Digitized existing land use and prepared land-use maps from satellite imagery and other sources.</li><li>Prepared land suitability maps and proposed land-use maps from planning requirements, existing conditions and spatial analysis.</li><li>Ran quality checks on GIS data and maps, and supported planners with maps and spatial analysis.</li></ul><details class="more"><summary>Work samples (2)</summary><div class="gallery work"><button type="button" class="fig " data-set="hp" data-full="assets/2-experience-hp-consultant-planners-hp-consultant-planners-work.webp" data-cap="Planning maps at HP Consultant Planners"><img src="assets/2-experience-hp-consultant-planners-hp-consultant-planners-work-t.webp" alt="Planning maps at HP Consultant Planners" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hp" data-full="assets/2-experience-hp-consultant-planners-updation-galiyat-landuse-map-analysis.webp" data-cap="Updating the Galiyat land use map"><img src="assets/2-experience-hp-consultant-planners-updation-galiyat-landuse-map-analysis-t.webp" alt="Updating the Galiyat land use map" width="640" height="360" loading="lazy" decoding="async"></button></div></details></article><article class="job"><div class="job-head"><h3>GIS Digitizer, Excise and Taxation Department</h3><p class="meta">Peshawar, KP. March 2023 to September 2023</p></div><ul><li>Took part in household data-collection surveys and organized the field information for GIS work.</li><li>Digitized geographic features from maps and imagery, and prepared spatial data for analysis.</li><li>Checked collected and digitized data to keep records consistent and accurate.</li></ul><details class="more"><summary>Work samples (1)</summary><div class="gallery work"><button type="button" class="fig " data-set="excise" data-full="assets/2-experience-excise-taxation-departme-digitization-of-land-parcels.webp" data-cap="Digitizing land parcels"><img src="assets/2-experience-excise-taxation-departme-digitization-of-land-parcels-t.webp" alt="Digitizing land parcels" width="640" height="360" loading="lazy" decoding="async"></button></div></details></article><article class="job"><div class="job-head"><h3>GIS Intern, Board of Revenue</h3><p class="meta">Peshawar, KP. January 2023 to February 2023</p></div><ul><li>Digitized Masavi maps for Mouza land records: split each map into grid sections and digitized cadastral and parcel boundary lines.</li><li>Converted digitized lines into polygons and added Khasra numbers and related attributes to parcels.</li><li>Checked and corrected the digitized cadastral data.</li></ul><details class="more"><summary>Work samples (3)</summary><div class="gallery work"><button type="button" class="fig " data-set="bor" data-full="assets/2-experience-board-of-revenue-peshawar-masavis.webp" data-cap="Masavi maps divided into grid sections"><img src="assets/2-experience-board-of-revenue-peshawar-masavis-t.webp" alt="Masavi maps divided into grid sections" width="640" height="380" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bor" data-full="assets/2-experience-board-of-revenue-peshawar-mouza-spinkhak-nowshera-kp.webp" data-cap="Mouza Spinkhak, Nowshera, KP"><img src="assets/2-experience-board-of-revenue-peshawar-mouza-spinkhak-nowshera-kp-t.webp" alt="Mouza Spinkhak, Nowshera, KP" width="640" height="383" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bor" data-full="assets/2-experience-board-of-revenue-peshawar-mouza.webp" data-cap="Digitized Mouza parcel boundaries"><img src="assets/2-experience-board-of-revenue-peshawar-mouza-t.webp" alt="Digitized Mouza parcel boundaries" width="640" height="416" loading="lazy" decoding="async"></button></div></details></article>
+</div></section>
+
+<section id="expertise"><div class="wrap">
+  <h2>Expertise</h2>
+  <p class="lede">Tools and methods I use day to day, with evidence below.</p>
+  <dl class="skills"><div><dt>GIS software</dt><dd>ArcMap 10.8, ArcGIS Pro, QGIS, Google Earth Engine, ERDAS Imagine, MapInfo</dd></div><div><dt>QA / QC</dt><dd>Shapefile checking, zone field generation, CRS correction, geometry repair, topology validation, zone-change detection, sliver, overlap and gap detection, attribute validation, missing-field checks, GeoJSON export</dd></div><div><dt>Geospatial analysis</dt><dd>Zoning and parcel analysis, land-use mapping, cadastral digitization, georeferencing, spatial analysis and visualization, hazard and flood mapping, suitability and interpolation analysis</dd></div><div><dt>Automation</dt><dd>Python (PyQGIS, arcpy, requests), GIS task automation, workflow optimization, data processing, web-map data extraction</dd></div><div><dt>Remote sensing</dt><dd>Landsat, Sentinel-2, supervised classification, NDVI, NDBI, NDWI, NDSI, FabDEM, SRTM, LULC mapping, time-series analysis, image stacking</dd></div><div><dt>Databases and data</dt><dd>PostgreSQL/PostGIS, spatial queries and intersections, ArcGIS REST Feature Services, GeoJSON, GeoPackage, GPS data, KoboToolbox</dd></div><div><dt>Working style</dt><dd>Cross-team collaboration, GIS quality auditing, mentoring, technical documentation, production workflow improvement</dd></div></dl>
+  <div class="evidence"><div class="ev"><h3>Google Earth Engine</h3><p>Land surface temperature and snow cover scripts, charts and outputs.</p><div class="gallery small"><button type="button" class="fig " data-set="gee" data-full="assets/skills-google-earth-engine-lst-distribution.webp" data-cap="LST distribution in Google Earth Engine"><img src="assets/skills-google-earth-engine-lst-distribution-t.webp" alt="LST distribution in Google Earth Engine" width="640" height="354" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="gee" data-full="assets/skills-google-earth-engine-lst-by-gee.webp" data-cap="Land surface temperature in Google Earth Engine"><img src="assets/skills-google-earth-engine-lst-by-gee-t.webp" alt="Land surface temperature in Google Earth Engine" width="640" height="380" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="gee" data-full="assets/skills-google-earth-engine-snow-cover-graph-by-gee.webp" data-cap="Snow cover chart from Google Earth Engine"><img src="assets/skills-google-earth-engine-snow-cover-graph-by-gee-t.webp" alt="Snow cover chart from Google Earth Engine" width="640" height="325" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="gee" data-full="assets/skills-google-earth-engine-snow-cover-by-gee-2.webp" data-cap="Snow cover time series in Google Earth Engine"><img src="assets/skills-google-earth-engine-snow-cover-by-gee-2-t.webp" alt="Snow cover time series in Google Earth Engine" width="640" height="382" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="gee" data-full="assets/skills-google-earth-engine-snow-cover-by-gee.webp" data-cap="Snow cover mapped in Google Earth Engine"><img src="assets/skills-google-earth-engine-snow-cover-by-gee-t.webp" alt="Snow cover mapped in Google Earth Engine" width="640" height="394" loading="lazy" decoding="async"></button></div></div><div class="ev"><h3>PostGIS and QGIS</h3><p>A local spatial database, viewed through the geometry viewer.</p><div class="gallery small"><button type="button" class="fig " data-set="postgis" data-full="assets/skills-postgis-postgis-database-geometery-viewer.webp" data-cap="PostGIS geometry viewer"><img src="assets/skills-postgis-postgis-database-geometery-viewer-t.webp" alt="PostGIS geometry viewer" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="postgis" data-full="assets/skills-postgis-postgis-database.webp" data-cap="PostGIS database in QGIS"><img src="assets/skills-postgis-postgis-database-t.webp" alt="PostGIS database in QGIS" width="640" height="205" loading="lazy" decoding="async"></button></div></div><div class="ev"><h3>Web-map scraping</h3><p>Pulling zoning layers and fields out of web mapping platforms, then cleaning them.</p><div class="gallery small"><button type="button" class="fig " data-set="scrape" data-full="assets/skills-web-map-scraping-scrap-file-zone-field-cleaning.webp" data-cap="Cleaning zone fields in a scraped file"><img src="assets/skills-web-map-scraping-scrap-file-zone-field-cleaning-t.webp" alt="Cleaning zone fields in a scraped file" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="scrape" data-full="assets/skills-web-map-scraping-web-maps-scraping-by-ai.webp" data-cap="Web-map scraping with AI assistance"><img src="assets/skills-web-map-scraping-web-maps-scraping-by-ai-t.webp" alt="Web-map scraping with AI assistance" width="640" height="263" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="scrape" data-full="assets/skills-web-map-scraping-zone-scraping.webp" data-cap="Zone scraping"><img src="assets/skills-web-map-scraping-zone-scraping-t.webp" alt="Zone scraping" width="640" height="339" loading="lazy" decoding="async"></button></div></div><div class="ev"><h3>Field surveys</h3><p>Level and total station surveys at the Bara Gali Summer Campus, University of Peshawar.</p><div class="gallery small"><button type="button" class="fig " data-set="survey" data-full="assets/skills-surveys-level-machine-survey-in-bara-gali-summer-campus-un.webp" data-cap="Level survey, Bara Gali Summer Campus, University of Peshawar"><img src="assets/skills-surveys-level-machine-survey-in-bara-gali-summer-campus-un-t.webp" alt="Level survey, Bara Gali Summer Campus, University of Peshawar" width="480" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="survey" data-full="assets/skills-surveys-total-station-survey-in-bara-gali-summer-campus-un.webp" data-cap="Total station survey, Bara Gali Summer Campus, University of Peshawar"><img src="assets/skills-surveys-total-station-survey-in-bara-gali-summer-campus-un-t.webp" alt="Total station survey, Bara Gali Summer Campus, University of Peshawar" width="480" height="640" loading="lazy" decoding="async"></button></div></div></div>
+  <div class="code">
+    <h3>Automation scripts</h3>
+    <p class="lede" style="margin-bottom:0">PyQGIS and arcpy scripts from my production workflow. Download and adapt them.</p>
+    <ul><li><a href="code/Convert_to_CRS.py" download>Convert_to_CRS.py</a><span>Reprojects layers to a target CRS in QGIS.</span></li><li><a href="code/Overlap_Code.py" download>Overlap_Code.py</a><span>Finds overlapping polygons with a spatial index.</span></li><li><a href="code/slivers.py" download>slivers.py</a><span>Flags sliver polygons in loaded layers.</span></li><li><a href="code/Qgis_Fields_Generator.py" download>Qgis_Fields_Generator.py</a><span>Adds missing standard fields to the active layer.</span></li><li><a href="code/fields_names_change.py" download>fields_names_change.py</a><span>Renames zone fields, for example zone_code to overlay_code.</span></li><li><a href="code/load_files.py" download>load_files.py</a><span>Loads every shapefile in a folder tree into QGIS.</span></li><li><a href="code/Making_Shapefile_Code.py" download>Making_Shapefile_Code.py</a><span>arcpy script that builds a shapefile from a raster layer.</span></li><li><a href="code/QGIS_Plugin_for_creating_CSV.zip" download>QGIS_Plugin_for_creating_CSV.zip</a><span>QGIS plugin that creates CSV files.</span></li></ul>
+  </div>
+</div></section>
+
+<section id="zoning" class="lab"><div class="wrap">
+  <h2>Zoning intelligence</h2>
+  <p class="lede">Zoning and parcel data is the core of my production work: georeferencing maps with RMS-error control, digitizing parcels, matching zone codes to the municipal ordinance and checking topology before delivery. The animation illustrates that process. The screenshots under it are from real work.</p>
+  <div class="lab-grid">
+    <div class="glass mapbox"><svg id="zsvg" class="zsvg" viewBox="0 0 640 400" role="img" aria-label="Animated illustration of parcels being classified into zoning districts"></svg><span class="sweep"></span><span class="tag">Illustrative parcel map</span></div>
+    <div>
+      <ul class="zleg" id="zleg" aria-label="Zoning districts"></ul>
+      <ol class="steps"><li>Georeference the zoning map</li><li>Digitize parcels and districts</li><li>Match zone codes to the ordinance</li><li>Check topology, slivers, gaps and attributes</li></ol>
+    </div>
+  </div>
+  <div class="real"><h3>Real zoning work</h3><p class="lede">Screenshots from production QA at Nook Office Solutions.</p><div class="gallery"><button type="button" class="fig " data-set="zreal" data-full="assets/2-experience-nook-office-solution-islam-checking-updation-by-symbology.webp" data-cap="Checking zone updates against map symbology"><img src="assets/2-experience-nook-office-solution-islam-checking-updation-by-symbology-t.webp" alt="Checking zone updates against map symbology" width="640" height="399" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="zreal" data-full="assets/2-experience-nook-office-solution-islam-matching-zone-code-with-ordinance.webp" data-cap="Matching zone codes with the ordinance"><img src="assets/2-experience-nook-office-solution-islam-matching-zone-code-with-ordinance-t.webp" alt="Matching zone codes with the ordinance" width="640" height="338" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="zreal" data-full="assets/2-experience-nook-office-solution-islam-map-updation-using-visualization-pdf.webp" data-cap="Updating a zoning map from a visualization PDF"><img src="assets/2-experience-nook-office-solution-islam-map-updation-using-visualization-pdf-t.webp" alt="Updating a zoning map from a visualization PDF" width="640" height="337" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="zreal" data-full="assets/2-experience-nook-office-solution-islam-confirming-specific-plan-codes.webp" data-cap="Confirming specific plan codes"><img src="assets/2-experience-nook-office-solution-islam-confirming-specific-plan-codes-t.webp" alt="Confirming specific plan codes" width="640" height="205" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="zreal" data-full="assets/2-experience-nook-office-solution-islam-web-maps-scraping.webp" data-cap="Web-map scraping"><img src="assets/2-experience-nook-office-solution-islam-web-maps-scraping-t.webp" alt="Web-map scraping" width="640" height="263" loading="lazy" decoding="async"></button></div></div>
+</div></section>
+
+<section id="remote" class="lab"><div class="wrap">
+  <h2>Remote sensing</h2>
+  <p class="lede">Landsat and Sentinel-2 imagery, spectral indices, supervised classification and Google Earth Engine time series, used in my MS research and project work. The scene below is a generated illustration of how each layer reads. The maps under it are real outputs.</p>
+  <div class="lab-grid">
+    <div class="glass mapbox"><canvas id="rs" aria-label="Illustrative satellite scene that switches between true colour, NDVI, NDBI, NDWI, land surface temperature and land cover"></canvas><span class="sweep fast"></span><span class="tag">Illustrative rendering. Not project data.</span></div>
+    <div>
+      <div class="chips" id="rschips" role="group" aria-label="Choose a layer">
+        <button type="button" data-m="rgb" class="on">True colour</button><button type="button" data-m="ndvi">NDVI</button><button type="button" data-m="ndbi">NDBI</button>
+        <button type="button" data-m="ndwi">NDWI</button><button type="button" data-m="lst">LST</button><button type="button" data-m="lulc">LULC</button>
+      </div>
+      <p id="rsnote"></p><div id="rsleg"></div><div class="rsl" id="rsl"></div>
+    </div>
+  </div>
+  <div class="real"><h3>Real remote sensing outputs</h3><p class="lede">From my MS research and project work.</p><div class="gallery"><button type="button" class="fig " data-set="rsreal" data-full="assets/5-gis-and-remote-sensing-analysis-res-lst-2025.webp" data-cap="LST 2025"><img src="assets/5-gis-and-remote-sensing-analysis-res-lst-2025-t.webp" alt="LST 2025" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="rsreal" data-full="assets/5-gis-and-remote-sensing-analysis-res-2025-lulc-update.webp" data-cap="Land use / land cover, 2025 update"><img src="assets/5-gis-and-remote-sensing-analysis-res-2025-lulc-update-t.webp" alt="Land use / land cover, 2025 update" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="rsreal" data-full="assets/5-gis-and-remote-sensing-analysis-res-ndvi-2024.webp" data-cap="NDVI 2024"><img src="assets/5-gis-and-remote-sensing-analysis-res-ndvi-2024-t.webp" alt="NDVI 2024" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="rsreal" data-full="assets/3-projects-4-snow-cover-of-batura-glac-snow-cover-from-2004-2024-combine.webp" data-cap="Snow cover comparison, 2004-2024"><img src="assets/3-projects-4-snow-cover-of-batura-glac-snow-cover-from-2004-2024-combine-t.webp" alt="Snow cover comparison, 2004-2024" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="rsreal" data-full="assets/3-projects-2-somalia-project-kurman-v-flood-susceptibility-map.webp" data-cap="Flood Susceptibility Map"><img src="assets/3-projects-2-somalia-project-kurman-v-flood-susceptibility-map-t.webp" alt="Flood Susceptibility Map" width="640" height="494" loading="lazy" decoding="async"></button></div></div>
+</div></section>
+
+<section id="automation" class="lab"><div class="wrap">
+  <h2>GIS automation and QA/QC</h2>
+  <p class="lede">Python tools that remove repetitive production work, from finding a city's GIS source to delivering a checked layer. Hover over a stage, or let it run. The scripts are in the Expertise section.</p>
+  <div class="glass flow" id="flow"></div>
+  <div class="lab-grid" style="align-items:stretch">
+    <div class="glass" id="flowinfo" aria-live="polite"></div>
+    <pre class="glass log" id="qalog" aria-label="Illustrative QA run"></pre>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="lede">Select any image to view it full size.</p>
+  <article class="proj"><div class="proj-text"><p class="kind">Research, MS Geomatics</p><h3>Peshawar Valley: land surface temperature and land use</h3><p>Land use / land cover and land surface temperature patterns across the Peshawar Valley, measured from satellite imagery to show how they changed over time. This is the subject of my MS thesis.</p><p class="tools">Landsat, Google Earth Engine, LULC, LST, NDVI</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-lst-2025.webp" data-cap="LST 2025"><img src="assets/5-gis-and-remote-sensing-analysis-res-lst-2025-t.webp" alt="LST 2025" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-lst-zone-2025.webp" data-cap="LST zone 2025"><img src="assets/5-gis-and-remote-sensing-analysis-res-lst-zone-2025-t.webp" alt="LST zone 2025" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-2025-lulc-update.webp" data-cap="Land use / land cover, 2025 update"><img src="assets/5-gis-and-remote-sensing-analysis-res-2025-lulc-update-t.webp" alt="Land use / land cover, 2025 update" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-peshawar-valley-boundary.webp" data-cap="Peshawar Valley Boundary"><img src="assets/5-gis-and-remote-sensing-analysis-res-peshawar-valley-boundary-t.webp" alt="Peshawar Valley Boundary" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-elevation-map.webp" data-cap="Elevation Map"><img src="assets/5-gis-and-remote-sensing-analysis-res-elevation-map-t.webp" alt="Elevation Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-geology-map.webp" data-cap="Geology map"><img src="assets/5-gis-and-remote-sensing-analysis-res-geology-map-t.webp" alt="Geology map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-rainfall-map.webp" data-cap="Rainfall Map"><img src="assets/5-gis-and-remote-sensing-analysis-res-rainfall-map-t.webp" alt="Rainfall Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pv" data-full="assets/5-gis-and-remote-sensing-analysis-res-combine-zonal12.webp" data-cap="Zonal statistics, combined"><img src="assets/5-gis-and-remote-sensing-analysis-res-combine-zonal12-t.webp" alt="Zonal statistics, combined" width="388" height="640" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">PG Diploma project</p><h3>Swabi District: land cover change, 2002 to 2022</h3><p>Two decades of land use and land cover change in Swabi District, with built-up expansion mapped separately to show how the landscape changed.</p><p class="tools">Remote sensing, supervised classification, change detection</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="swabi" data-full="assets/3-projects-7-land-use-land-cover-swabi-chang-builtup.webp" data-cap="Built-up area change, 2002-2022"><img src="assets/3-projects-7-land-use-land-cover-swabi-chang-builtup-t.webp" alt="Built-up area change, 2002-2022" width="640" height="452" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="swabi" data-full="assets/3-projects-7-land-use-land-cover-swabi-change-detection-2002-2022.webp" data-cap="Land cover change detection, 2002-2022"><img src="assets/3-projects-7-land-use-land-cover-swabi-change-detection-2002-2022-t.webp" alt="Land cover change detection, 2002-2022" width="640" height="449" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="swabi" data-full="assets/3-projects-7-land-use-land-cover-swabi-study-area-2.webp" data-cap="Study area, Swabi District"><img src="assets/3-projects-7-land-use-land-cover-swabi-study-area-2-t.webp" alt="Study area, Swabi District" width="453" height="640" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">Flood-risk project</p><h3>Kurman Valley, Somalia: flood susceptibility</h3><p>Flood susceptibility and sediment transport maps that mark vulnerable areas and candidate sites for desilting.</p><p class="tools">DEM, slope, hydrology, susceptibility modelling</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="somalia" data-full="assets/3-projects-2-somalia-project-kurman-v-flood-susceptibility-map.webp" data-cap="Flood Susceptibility Map"><img src="assets/3-projects-2-somalia-project-kurman-v-flood-susceptibility-map-t.webp" alt="Flood Susceptibility Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="somalia" data-full="assets/3-projects-2-somalia-project-kurman-v-sediment-transport-desilting-areas-map.webp" data-cap="Sediment Transport &amp; Desilting Areas Map"><img src="assets/3-projects-2-somalia-project-kurman-v-sediment-transport-desilting-areas-map-t.webp" alt="Sediment Transport &amp; Desilting Areas Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="somalia" data-full="assets/3-projects-2-somalia-project-kurman-v-slope-elevation-flood-susceptibility-map.webp" data-cap="Slope, Elevation, Flood Susceptibility Map"><img src="assets/3-projects-2-somalia-project-kurman-v-slope-elevation-flood-susceptibility-map-t.webp" alt="Slope, Elevation, Flood Susceptibility Map" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="somalia" data-full="assets/3-projects-2-somalia-project-kurman-v-streams.webp" data-cap="Streams and study area, Kurman Valley"><img src="assets/3-projects-2-somalia-project-kurman-v-streams-t.webp" alt="Streams and study area, Kurman Valley" width="494" height="640" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">Comparative GIS study</p><h3>Hackney, UK: school catchments and active travel</h3><p>Amenities and services maps for two school catchments, compared on cycling and walking distance.</p><p class="tools">Network buffers, amenity mapping, catchment analysis</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="uk" data-full="assets/3-projects-1-uk-project-comparative-a-hackney-amenities-services-map.webp" data-cap="Hackney Amenities &amp; Services Map"><img src="assets/3-projects-1-uk-project-comparative-a-hackney-amenities-services-map-t.webp" alt="Hackney Amenities &amp; Services Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="uk" data-full="assets/3-projects-1-uk-project-comparative-a-the-city-academy-hackney-study-area.webp" data-cap="The City Academy Hackney Study Area"><img src="assets/3-projects-1-uk-project-comparative-a-the-city-academy-hackney-study-area-t.webp" alt="The City Academy Hackney Study Area" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="uk" data-full="assets/3-projects-1-uk-project-comparative-a-yewland-academy-study-area.webp" data-cap="Yewland Academy Study Area"><img src="assets/3-projects-1-uk-project-comparative-a-yewland-academy-study-area-t.webp" alt="Yewland Academy Study Area" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="uk" data-full="assets/3-projects-1-uk-project-comparative-a-yewland-amenities-services-map.webp" data-cap="Yewland Amenities &amp; Services Map"><img src="assets/3-projects-1-uk-project-comparative-a-yewland-amenities-services-map-t.webp" alt="Yewland Amenities &amp; Services Map" width="640" height="494" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">Digitization project</p><h3>Ontario, Canada: land use map digitization</h3><p>Land use maps for Caledon, Georgina and Clarington turned into structured spatial datasets.</p><p class="tools">Digitization, georeferencing, land use classification</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="canada" data-full="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-clarington-ontario-ca.webp" data-cap="Clarington land use, digitized"><img src="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-clarington-ontario-ca-t.webp" alt="Clarington land use, digitized" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="canada" data-full="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-town-of-georgina-ontario-.webp" data-cap="Georgina land use, digitized"><img src="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-town-of-georgina-ontario--t.webp" alt="Georgina land use, digitized" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="canada" data-full="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-caledon-town-ontario-ca.webp" data-cap="Caledon land use, digitized"><img src="assets/3-projects-3-canada-digitization-of-la-digitization-land-use-of-caledon-town-ontario-ca-t.webp" alt="Caledon land use, digitized" width="640" height="494" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">Remote sensing project</p><h3>Batura Glacier, Pakistan: snow cover, 2004 to 2024</h3><p>A multi-year snow cover comparison that shows how snow coverage in the glacier region changed over twenty years.</p><p class="tools">Google Earth Engine, snow indices, time series</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="batura" data-full="assets/3-projects-4-snow-cover-of-batura-glac-snow-cover-from-2004-2024-combine.webp" data-cap="Snow cover comparison, 2004-2024"><img src="assets/3-projects-4-snow-cover-of-batura-glac-snow-cover-from-2004-2024-combine-t.webp" alt="Snow cover comparison, 2004-2024" width="640" height="494" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">Land records project</p><h3>Mouza Taru, Nowshera: encroachment on state land</h3><p>Land use maps from 2005 and 2025 with an overlay map showing where state land has been encroached.</p><p class="tools">Overlay analysis, land use mapping, cadastral data</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="taru" data-full="assets/3-projects-6-spatial-distribution-of-e-2005-land-use-map.webp" data-cap="2005 Land use map"><img src="assets/3-projects-6-spatial-distribution-of-e-2005-land-use-map-t.webp" alt="2005 Land use map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="taru" data-full="assets/3-projects-6-spatial-distribution-of-e-2025-land-use-map.webp" data-cap="2025 Land use map"><img src="assets/3-projects-6-spatial-distribution-of-e-2025-land-use-map-t.webp" alt="2025 Land use map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="taru" data-full="assets/3-projects-6-spatial-distribution-of-e-spatial-distribution-overlay.webp" data-cap="Spatial Distribution Overlay"><img src="assets/3-projects-6-spatial-distribution-of-e-spatial-distribution-overlay-t.webp" alt="Spatial Distribution Overlay" width="640" height="494" loading="lazy" decoding="async"></button></div></article><article class="proj"><div class="proj-text"><p class="kind">PG Diploma coursework</p><h3>Post Graduate Diploma GIS projects</h3><p>Suitability, population and rainfall maps from the PG Diploma in Geomatics, covering Ontario, Canada and Khyber Pakhtunkhwa.</p><p class="tools">Suitability analysis, choropleth mapping, interpolation</p></div><div class="gallery lead1"><button type="button" class="fig lead" data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-oak-ridge-moraine-on-canada.webp" data-cap="Oak Ridges Moraine, Ontario"><img src="assets/3-projects-5-post-graduate-diploma-gis-oak-ridge-moraine-on-canada-t.webp" alt="Oak Ridges Moraine, Ontario" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-pop-density-of-kp.webp" data-cap="Population density of Khyber Pakhtunkhwa"><img src="assets/3-projects-5-post-graduate-diploma-gis-pop-density-of-kp-t.webp" alt="Population density of Khyber Pakhtunkhwa" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-population-density.webp" data-cap="Population Density"><img src="assets/3-projects-5-post-graduate-diploma-gis-population-density-t.webp" alt="Population Density" width="640" height="450" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-suitable-lands-for-university-on-canada.webp" data-cap="Suitable lands for a university site, Ontario"><img src="assets/3-projects-5-post-graduate-diploma-gis-suitable-lands-for-university-on-canada-t.webp" alt="Suitable lands for a university site, Ontario" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-suitable-location-for-air-monitoring-stations.webp" data-cap="Suitable locations for air monitoring stations"><img src="assets/3-projects-5-post-graduate-diploma-gis-suitable-location-for-air-monitoring-stations-t.webp" alt="Suitable locations for air monitoring stations" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pgd" data-full="assets/3-projects-5-post-graduate-diploma-gis-charsadda-rainfall-map-kp.webp" data-cap="Rainfall map, District Charsadda"><img src="assets/3-projects-5-post-graduate-diploma-gis-charsadda-rainfall-map-kp-t.webp" alt="Rainfall map, District Charsadda" width="640" height="494" loading="lazy" decoding="async"></button></div></article>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <h2>Research and analysis</h2>
+  <p class="lede">More map sets from academic research and independent analysis.</p>
+  <details class="res"><summary><span>District Peshawar: LULC and LST</span><small>5 maps</small></summary><p>Study area, LULC, NDVI, LST and LST zones for 2024.</p><div class="gallery"><button type="button" class="fig " data-set="pesh" data-full="assets/5-gis-and-remote-sensing-analysis-res-lst-2024.webp" data-cap="LST 2024"><img src="assets/5-gis-and-remote-sensing-analysis-res-lst-2024-t.webp" alt="LST 2024" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pesh" data-full="assets/5-gis-and-remote-sensing-analysis-res-lst-zones-2024.webp" data-cap="LST zones 2024"><img src="assets/5-gis-and-remote-sensing-analysis-res-lst-zones-2024-t.webp" alt="LST zones 2024" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pesh" data-full="assets/5-gis-and-remote-sensing-analysis-res-lulc-2024.webp" data-cap="LULC 2024"><img src="assets/5-gis-and-remote-sensing-analysis-res-lulc-2024-t.webp" alt="LULC 2024" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pesh" data-full="assets/5-gis-and-remote-sensing-analysis-res-ndvi-2024.webp" data-cap="NDVI 2024"><img src="assets/5-gis-and-remote-sensing-analysis-res-ndvi-2024-t.webp" alt="NDVI 2024" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="pesh" data-full="assets/5-gis-and-remote-sensing-analysis-res-peshawar-study-area.webp" data-cap="Peshawar Study Area"><img src="assets/5-gis-and-remote-sensing-analysis-res-peshawar-study-area-t.webp" alt="Peshawar Study Area" width="640" height="494" loading="lazy" decoding="async"></button></div></details><details class="res"><summary><span>Bagh District, AJK: hazard and landslide susceptibility</span><small>12 maps</small></summary><p>Terrain, soils and classified imagery from ASTER and SRTM, combined into hazard and landslide susceptibility maps.</p><div class="gallery"><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-aspect-map.webp" data-cap="Aspect Map"><img src="assets/5-gis-and-remote-sensing-analysis-res-aspect-map-t.webp" alt="Aspect Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-aster-dem.webp" data-cap="ASTER DEM"><img src="assets/5-gis-and-remote-sensing-analysis-res-aster-dem-t.webp" alt="ASTER DEM" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-aster-slope.webp" data-cap="ASTER slope"><img src="assets/5-gis-and-remote-sensing-analysis-res-aster-slope-t.webp" alt="ASTER slope" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-classified-map.webp" data-cap="Classified map"><img src="assets/5-gis-and-remote-sensing-analysis-res-classified-map-t.webp" alt="Classified map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-contour-map.webp" data-cap="Contour map"><img src="assets/5-gis-and-remote-sensing-analysis-res-contour-map-t.webp" alt="Contour map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-hazard-map.webp" data-cap="Hazard map"><img src="assets/5-gis-and-remote-sensing-analysis-res-hazard-map-t.webp" alt="Hazard map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-ls-hazard-map.webp" data-cap="Landslide hazard map"><img src="assets/5-gis-and-remote-sensing-analysis-res-ls-hazard-map-t.webp" alt="Landslide hazard map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-srtm-dem.webp" data-cap="SRTM DEM"><img src="assets/5-gis-and-remote-sensing-analysis-res-srtm-dem-t.webp" alt="SRTM DEM" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-srtm-slope.webp" data-cap="SRTM slope"><img src="assets/5-gis-and-remote-sensing-analysis-res-srtm-slope-t.webp" alt="SRTM slope" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-satellite-imagery.webp" data-cap="Satellite imagery"><img src="assets/5-gis-and-remote-sensing-analysis-res-satellite-imagery-t.webp" alt="Satellite imagery" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-soil-of-bagh.webp" data-cap="Soils of Bagh"><img src="assets/5-gis-and-remote-sensing-analysis-res-soil-of-bagh-t.webp" alt="Soils of Bagh" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="bagh" data-full="assets/5-gis-and-remote-sensing-analysis-res-study-area1.webp" data-cap="Study area"><img src="assets/5-gis-and-remote-sensing-analysis-res-study-area1-t.webp" alt="Study area" width="494" height="640" loading="lazy" decoding="async"></button></div></details><details class="res"><summary><span>Housing societies in Peshawar</span><small>8 maps</small></summary><p>Four housing societies mapped across two dates to show how each has grown.</p><div class="gallery"><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-al-haram-2010.webp" data-cap="Al Haram 2010"><img src="assets/5-gis-and-remote-sensing-analysis-res-al-haram-2010-t.webp" alt="Al Haram 2010" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-al-haram.webp" data-cap="Al Haram"><img src="assets/5-gis-and-remote-sensing-analysis-res-al-haram-t.webp" alt="Al Haram" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-executive-lodges-2013.webp" data-cap="Executive Lodges 2013"><img src="assets/5-gis-and-remote-sensing-analysis-res-executive-lodges-2013-t.webp" alt="Executive Lodges 2013" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-executive-lodges-2020.webp" data-cap="Executive Lodges 2020"><img src="assets/5-gis-and-remote-sensing-analysis-res-executive-lodges-2020-t.webp" alt="Executive Lodges 2020" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-new-city-home-2010.webp" data-cap="New City Home 2010"><img src="assets/5-gis-and-remote-sensing-analysis-res-new-city-home-2010-t.webp" alt="New City Home 2010" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-new-city-home-2020.webp" data-cap="New City Home 2020"><img src="assets/5-gis-and-remote-sensing-analysis-res-new-city-home-2020-t.webp" alt="New City Home 2020" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-sheikh-yaseen-2010.webp" data-cap="Sheikh Yaseen, 2010"><img src="assets/5-gis-and-remote-sensing-analysis-res-sheikh-yaseen-2010-t.webp" alt="Sheikh Yaseen, 2010" width="640" height="360" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="hs" data-full="assets/5-gis-and-remote-sensing-analysis-res-sheikh-yaseen-2020.webp" data-cap="Sheikh Yaseen, 2020"><img src="assets/5-gis-and-remote-sensing-analysis-res-sheikh-yaseen-2020-t.webp" alt="Sheikh Yaseen, 2020" width="640" height="360" loading="lazy" decoding="async"></button></div></details><details class="res"><summary><span>Yaka Ghund, Mohmand</span><small>3 maps</small></summary><p>Classified land cover for 2010 and built-up change from 2010 to 2023.</p><div class="gallery"><button type="button" class="fig " data-set="yaka" data-full="assets/5-gis-and-remote-sensing-analysis-res-builtup-2010-2023.webp" data-cap="Builtup 2010-2023"><img src="assets/5-gis-and-remote-sensing-analysis-res-builtup-2010-2023-t.webp" alt="Builtup 2010-2023" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="yaka" data-full="assets/5-gis-and-remote-sensing-analysis-res-lulc-classified2010.webp" data-cap="Classified LULC, 2010"><img src="assets/5-gis-and-remote-sensing-analysis-res-lulc-classified2010-t.webp" alt="Classified LULC, 2010" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="yaka" data-full="assets/5-gis-and-remote-sensing-analysis-res-studyarea-yaka.webp" data-cap="Study area, Yaka Ghund"><img src="assets/5-gis-and-remote-sensing-analysis-res-studyarea-yaka-t.webp" alt="Study area, Yaka Ghund" width="640" height="388" loading="lazy" decoding="async"></button></div></details><details class="res"><summary><span>Population density, Mardan and other analyses</span><small>4 maps</small></summary><p>Mardan study area and population density in three symbol styles.</p><div class="gallery"><button type="button" class="fig " data-set="other" data-full="assets/5-gis-and-remote-sensing-analysis-res-mardan-kp-study-area-map.webp" data-cap="Mardan, KP Study Area Map"><img src="assets/5-gis-and-remote-sensing-analysis-res-mardan-kp-study-area-map-t.webp" alt="Mardan, KP Study Area Map" width="640" height="494" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="other" data-full="assets/5-gis-and-remote-sensing-analysis-res-pop-density-by-dot-value.webp" data-cap="Population density (dot density)"><img src="assets/5-gis-and-remote-sensing-analysis-res-pop-density-by-dot-value-t.webp" alt="Population density (dot density)" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="other" data-full="assets/5-gis-and-remote-sensing-analysis-res-pop-density-by-pie-value.webp" data-cap="Population density (pie symbols)"><img src="assets/5-gis-and-remote-sensing-analysis-res-pop-density-by-pie-value-t.webp" alt="Population density (pie symbols)" width="494" height="640" loading="lazy" decoding="async"></button><button type="button" class="fig " data-set="other" data-full="assets/5-gis-and-remote-sensing-analysis-res-pop-density.webp" data-cap="Population density"><img src="assets/5-gis-and-remote-sensing-analysis-res-pop-density-t.webp" alt="Population density" width="494" height="640" loading="lazy" decoding="async"></button></div></details>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <ul class="edu" style="margin-top:1.5rem"><li><strong>MS Geomatics (GIS and Remote Sensing)</strong><span>University of Peshawar. 2024 to 2026</span><em>Thesis: land surface temperature and its impact on the built environment, Peshawar Valley, KP</em></li><li><strong>PG Diploma in Geomatics (GIS/RS)</strong><span>University of Peshawar. 2023 to 2024</span><em>Project: Swabi District land use land cover assessment</em></li><li><strong>BS Geography</strong><span>University of Peshawar. 2019 to 2023</span><em>Project: urban expansion and growth of Sarai Naurang, Lakki Marwat, KP</em></li></ul>
+  <h2>Certificates</h2>
+  <div class="certs" style="margin-top:1.5rem"><figure><button type="button" class="fig " data-set="cert" data-full="assets/4-certificates-ndma-pakistan-workshop-certificate.webp" data-cap="NDMA Pakistan Workshop Certificate"><img src="assets/4-certificates-ndma-pakistan-workshop-certificate-t.webp" alt="NDMA Pakistan Workshop Certificate" width="640" height="466" loading="lazy" decoding="async"></button><figcaption>Resilient Urban Planning in Climate Extremes, two-day training, NIDM / NDMA, Peshawar, 19-20 December 2023</figcaption></figure><figure><button type="button" class="fig " data-set="cert" data-full="assets/4-certificates-china-today-workshop-certificate.webp" data-cap="China Today Workshop Certificate"><img src="assets/4-certificates-china-today-workshop-certificate-t.webp" alt="China Today Workshop Certificate" width="447" height="640" loading="lazy" decoding="async"></button><figcaption>China Today, one-week workshop, China Study Centre, University of Peshawar</figcaption></figure><figure class="pdfcert"><div><p><strong>Introduction to GIS Mapping</strong></p><p>University of Toronto, via Coursera. Completed April 1, 2023.</p><p><a href="https://coursera.org/verify/RDXUZRM956K8" rel="noopener">Verify on Coursera</a></p></div></figure></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div><h2>Contact</h2><p class="lede" style="margin-bottom:0">Open to GIS, zoning, remote sensing and automation work, including contracts and retainers.</p></div>
+  <dl>
+    <dt>Email</dt><dd class="big"><a href="mailto:alinawaz03943@gmail.com">alinawaz03943@gmail.com</a></dd>
+    <dt>Phone</dt><dd><a href="tel:+923149983960">+92 314 9983960</a></dd>
+    <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ali-nawaz-62b7561b2/" rel="noopener">linkedin.com/in/ali-nawaz-62b7561b2</a></dd>
+    <dt>GitHub</dt><dd><a href="https://github.com/alinawaz03943-cloud" rel="noopener">github.com/alinawaz03943-cloud</a></dd>
+    <dt>Location</dt><dd>Peshawar, Pakistan</dd>
+  </dl>
+</div></section>
+</main>
+<footer><div class="wrap">Ali Nawaz. GIS Analyst, Zoning Analyst, Remote Sensing Specialist, Geospatial Data Analyst.</div></footer>
+
+<dialog id="lb" aria-label="Image viewer"><div class="lb">
+  <div id="lbimg" class="view" role="img" aria-label=""></div><p id="lbcap"></p><p class="det" id="lbdet"></p>
+  <div class="bar"><button type="button" id="prev">Previous</button><button type="button" id="next">Next</button><button type="button" id="close">Close</button></div>
+</div></dialog>
+
+<script>
+(function(){
+  // Image-path safety net: if an image 404s, retry common upload layouts, then show a placeholder.
+  var PFX=['','./','ali-nawaz-portfolio/','portfolio/','docs/'];
+  document.addEventListener('error',function(e){var im=e.target;if(!im||im.tagName!=='IMG')return;var o=im.dataset.o||im.getAttribute('src'),k=+(im.dataset.k||0)+1;
+    if(k>=PFX.length){im.classList.add('miss');console.warn('Portfolio: image not found ->',o);return}im.dataset.o=o;im.dataset.k=k;im.src=PFX[k]+o;},true);
+  function loadBg(el,u,k){k=k||0;var t=new Image();t.onload=function(){el.style.backgroundImage='url("'+t.src+'")'};t.onerror=function(){if(k+1<PFX.length)loadBg(el,u,k+1)};t.src=PFX[k]+u;}
+  var dEl=document.getElementById('lbdet');
+  function det(f){var c=f.closest('.proj'),h='',d='',tl='';
+    if(c){h=c.querySelector('h3').textContent;var p=c.querySelectorAll('.proj-text p');d=p[1]?p[1].textContent:'';tl=c.querySelector('.tools')?c.querySelector('.tools').textContent:'';}
+    else if(c=f.closest('.job')){h=c.querySelector('h3').textContent;d=c.querySelector('.meta').textContent;}
+    else if(c=f.closest('.res')){h=c.querySelector('summary span').textContent;d=c.querySelector('p').textContent;}
+    dEl.textContent='';if(!h)return;var s=document.createElement('strong');s.textContent=h;dEl.appendChild(s);dEl.appendChild(document.createTextNode(d?' - '+d:''));if(tl)dEl.appendChild(document.createTextNode(' ['+tl+']'));}
+  // One title at a time: 1, 2, 3, 4, then repeat. Reduced-motion visitors see all four.
+  var roles=document.getElementById('roles'),items=[].slice.call(roles.querySelectorAll('li')),i=0;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!still){roles.classList.add('cycle');setInterval(function(){
+    items[i].removeAttribute('aria-current'); i=(i+1)%items.length; items[i].setAttribute('aria-current','true');
+  },2400);}
+
+  // Hero maps: one from each body of work, fading from one to the next.
+  var slides=[].slice.call(document.querySelectorAll('#stage .slide')),sc=document.getElementById('stagecap'),k=0;
+  if(!still&&slides.length>1){setInterval(function(){
+    slides[k].classList.remove('on'); k=(k+1)%slides.length; slides[k].classList.add('on'); sc.textContent=slides[k].dataset.cap;
+  },1000);}
+
+  // Make casual saving harder: no right-click menu or dragging on pictures.
+  document.addEventListener('contextmenu',function(e){if(e.target.closest('img,.fig,.sheet,.lb,.about .side'))e.preventDefault();});
+  document.addEventListener('dragstart',function(e){if(e.target.closest('img,.fig,.sheet,.lb,.about .side'))e.preventDefault();});
+
+  // Lightbox
+  var dlg=document.getElementById('lb'),img=document.getElementById('lbimg'),cap=document.getElementById('lbcap'),cur=[],n=0;
+  function show(){var f=cur[n];loadBg(img,f.dataset.full);img.setAttribute('aria-label',f.dataset.cap);cap.textContent=f.dataset.cap+'  ('+(n+1)+' of '+cur.length+')';det(f);}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.fig'); if(!b) return;
+    cur=[].slice.call(document.querySelectorAll('.fig[data-set="'+b.dataset.set+'"]')); n=cur.indexOf(b); show();
+    if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  });
+  function step(d){n=(n+d+cur.length)%cur.length;show();}
+  document.getElementById('prev').onclick=function(){step(-1)};
+  document.getElementById('next').onclick=function(){step(1)};
+  document.getElementById('close').onclick=function(){dlg.close()};
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  document.addEventListener('keydown',function(e){if(!dlg.open)return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+})();
+</script>
+<script>
+/* ===== GeoAI upgrade scripts ===== */
+(function(){ /* ---- 3D globe: dotted land, graticule, orbits, data arcs ---- */
+var cv=document.getElementById('globe');if(!cv||!cv.getContext)return;
+var cx=cv.getContext('2d'),RM=matchMedia('(prefers-reduced-motion: reduce)').matches,D=Math.PI/180;
+var B=atob('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABf+A//wAAAAAAAAAAAAAAAAAAAAAAA//////8AAAADwAADgAAAAAAAAAAAGff8f///wAB+AAAAAAeAAAAAAAAAABxD34f///4AAIAAAEAAOwAAAAAAAAAAGDvwAf//wAAAAADAAf/wAHIAAAAAAHcn38AP//gAAAAAMDT///8AAAAgDwAAfw3/wH/+gAAA4AGHf//////gBAf///3odnwD/+AAAP/kA7/////////0H//////h+H/gAAAf/7///////////Mf/////9v4D8A+AB++////////////Af/////4gwB4AAAH7/////////////Af/////gHgAwAAAP7///////////HwADgH///gP0AAAAEH5/////////+EYAADgB///4H+AAAAGCz/////////4A8AAQAA////v/gAAAOCL/////////wB4AAAAAf///v/wAAAfv///////////AgAAAAAP/////QAAAHf//////////9AAAAAAAH////s4AAAH///////////9AAAAAAAD////9AAAAB///fv//////5AAAAAAAD////8AAAAB/f7ef//////xAAAAAAAH////gAAAAfjnwPP//////jAAAAAAAD////AAAAAfCf//v/////+CAAAAAAAD///+AAAAAfALf/H////+sCAAAAAAAB///8AAAAAe/QP///////mMAAAAAAAB///8AAAAAH+AC///////E4AAAAAAAAf//wAAAAAf/iB///////BgAAAAAAAAP//gAAAAAf/7////////gAAAAAAAAAD/AwAAAAA/////f/////gAAAAAAAAAF+AcAAAAB///+/v/////AAAAAAAAAAC+AAAAAAD/////0H///+gAAAAAAAAAAeAwAAAAD////f/D///8gAAAAABAAAAeGGAAAAH////P+B/z+AAAAAAAAAAAAP8A4AAAD////v+A/B+ggAAAAAAAAAAD8AAAAAH////n4AeB/AgAAAAAAAAAAAPAAAAAH////3gAcAfAgAAAAAAAAAAADAAAAAH////+AAcAfgoAAAAAAAAAAABD7AAAD////9wAMAXBYAAAAAAAAAAAA//AAAB/////gAKASAYAAAAAAAAAAAAH/gAAA/////gACAICIAAAAAAAAAAAAH/8AAAaP///AAABsGAAAAAAAAAAAAAH/8AAAAB//+AAAAceAAAAAAAAAAAAAP/+AAAAD//8AAAAc+0AAAAAAAAAAAAf//gAAAD//4AAAAMdxgAAAAAAAAAAAP//8AAAB//wAAAAGdm+EAAAAAAAAAAf///AAAA//gAAAACBQHkAAAAAAAAAAP///gAAA//wAAAABwAHwgAAAAAAAAAP///AAAA//wAAAAACICYIAAAAAAAAAH//+AAAAf/wAAAAAAAgAAAAAAAAAAAH//+AAAA//wgAAAAABxAAAAAAAAAAAD//+AAAA//xgAAAAAPxgBAAAAAAAAAA//8AAAA//jgAAAAAf/gAAAAAAAAAAAf/8AAAA//DgAAAAA//wAAAAAAAAAAAf/8AAAAf/HAAAAAH//4CAAAAAAAAAAf/wAAAAf/DAAAAAH//4AAAAAAAAAAA//AAAAAf+CAAAAAH//8AAAAAAAAAAA//AAAAAf8AAAAAAH//+AAAAAAAAAAA/+AAAAAP0AAAAAAH//+AAAAAAAAAAA/8AAAAAH4AAAAAAD//8AAAAAAAAAAA/8AAAAAHwAAAAAADwf8AAAAAAAAAAA/gAAAAAAAAAAAAACAP4AIAAAAAAAAB/gAAAAAAAAAAAAAAAD4AEAAAAAAAAB+AAAAAAAAAAAAAAAAAAAGAAAAAAAAB6AAAAAAAAAAAAAAAAAwAMAAAAAAAAB4AAAAAAAAAAAAAAAAAQAQAAAAAAAAD4AAAAAAAAAAAAAAAAAABgAAAAAAAAD4AAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAACAAAAAAAAAAAAAAAAADggAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAMAAAAAAAAA/AB/////gAAAAAAAAAAAsAAAAAAADv/+H//////gAAAAAAAAAB+AAAAP/////8////////gAAAAIgO+R/AAAD///////////////gAAB//////8AAAP//////////////8AAB//////8AAAP///////////////8AAE//////4ABw////////////////8AAB///////4AH////////////////4AAAf//////////////////////////AAH/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'),L=[];
+for(var r=0;r<90;r++)for(var c=0;c<180;c++){var i=r*180+c;if((B.charCodeAt(i>>3)>>(7-(i&7)))&1){var la=(89-r*2)*D,lo=(-179+c*2)*D;L.push(Math.cos(la)*Math.cos(lo),Math.cos(la)*Math.sin(lo),Math.sin(la));}}
+function V(la,lo){la*=D;lo*=D;return[Math.cos(la)*Math.cos(lo),Math.cos(la)*Math.sin(lo),Math.sin(la)];}
+var HOME=V(34,71.5),PTS=[[34,71.5,'Peshawar Valley'],[43.9,-80,'Ontario'],[51.5,-0.1,'London'],[5,46,'Somalia'],[36.5,74.5,'']],
+ ARCS=[[43.9,-80],[51.5,-0.1],[5,46]].map(function(t){var b=V(t[0],t[1]),o=Math.acos(HOME[0]*b[0]+HOME[1]*b[1]+HOME[2]*b[2]),s=Math.sin(o),a=[];
+  for(var k=0;k<=30;k++){var u=k/30,s1=Math.sin((1-u)*o)/s,s2=Math.sin(u*o)/s,h=1+.22*Math.sin(Math.PI*u);a.push([(s1*HOME[0]+s2*b[0])*h,(s1*HOME[1]+s2*b[1])*h,(s1*HOME[2]+s2*b[2])*h]);}return a;}),
+ ORB=[{i:62,n:20,k:1.3,s:.55,p:0},{i:28,n:-40,k:1.45,s:-.38,p:2},{i:85,n:110,k:1.22,s:.7,p:4}];
+var l0=2.1,p0=.45,vl=0,auto=-.1,dpr=1,W=0,H=0,R=0,ox=0,oy=0,c0,s0,cp,sp,X,Y,Z,drag=0,lx=0,ly=0,lt=0,run=false,vis=true,last=0,fr=0,ro=document.getElementById('readout');
+function pr(x,y,z){var a=x*c0+y*s0;X=y*c0-x*s0;Y=cp*z-sp*a;Z=sp*z+cp*a;}
+function sx(){return ox+R*X}function sy(){return oy-R*Y}
+function orb(o,t){var ci=Math.cos(o.i*D),si=Math.sin(o.i*D),cn=Math.cos(o.n*D),sn=Math.sin(o.n*D);
+ return function(a){var x=Math.cos(a)*o.k,y=Math.sin(a)*o.k*ci,z=Math.sin(a)*o.k*si;return[x*cn-y*sn,x*sn+y*cn,z];};}
+function path(f,n,front,col,lw){cx.beginPath();var pen=false;for(var k=0;k<=n;k++){var q=f(k/n);pr(q[0],q[1],q[2]);var ok=front?Z>=0:(Z<0);if(ok){if(pen)cx.lineTo(sx(),sy());else{cx.moveTo(sx(),sy());pen=true;}}else pen=false;}cx.strokeStyle=col;cx.lineWidth=lw;cx.stroke();}
+function sats(t,front){ORB.forEach(function(o){var f=orb(o),a=t*.001*o.s+o.p;
+ for(var k=0;k<9;k++){var q=f(a-k*.05*(o.s>0?1:-1));pr(q[0],q[1],q[2]);if((Z>=0)!==front)continue;cx.fillStyle='rgba(134,239,172,'+(.55-k*.06)+')';cx.beginPath();cx.arc(sx(),sy(),(3.2-k*.25)*dpr,0,7);cx.fill();}
+ var q=f(a);pr(q[0],q[1],q[2]);if((Z>=0)===front){var x=sx(),y=sy();
+  if(front){var h=Math.hypot(q[0],q[1],q[2]);pr(q[0]/h,q[1]/h,q[2]/h);cx.strokeStyle='rgba(34,211,238,.28)';cx.lineWidth=dpr;cx.beginPath();cx.moveTo(x,y);cx.lineTo(sx(),sy());cx.stroke();cx.fillStyle='rgba(34,211,238,.18)';cx.beginPath();cx.arc(sx(),sy(),5*dpr,0,7);cx.fill();}
+  var g=cx.createRadialGradient(x,y,0,x,y,9*dpr);g.addColorStop(0,'rgba(255,255,255,.95)');g.addColorStop(.3,'rgba(110,231,183,.8)');g.addColorStop(1,'rgba(110,231,183,0)');cx.fillStyle=g;cx.beginPath();cx.arc(x,y,9*dpr,0,7);cx.fill();}});}
+function draw(t){W=cv.width;H=cv.height;R=W*.34;ox=W/2;oy=H/2;c0=Math.cos(l0);s0=Math.sin(l0);cp=Math.cos(p0);sp=Math.sin(p0);
+ cx.clearRect(0,0,W,H);
+ var g=cx.createRadialGradient(ox,oy,R*.95,ox,oy,R*1.34);g.addColorStop(0,'rgba(34,211,238,.4)');g.addColorStop(.3,'rgba(34,211,238,.12)');g.addColorStop(1,'rgba(34,211,238,0)');cx.fillStyle=g;cx.beginPath();cx.arc(ox,oy,R*1.34,0,7);cx.fill();
+ ORB.forEach(function(o){path(orb(o),140,false,'rgba(134,239,172,.2)',dpr)});sats(t,false);
+ g=cx.createRadialGradient(ox-R*.35,oy-R*.4,R*.1,ox,oy,R);g.addColorStop(0,'#0f4262');g.addColorStop(.6,'#06223c');g.addColorStop(1,'#020a14');cx.fillStyle=g;cx.beginPath();cx.arc(ox,oy,R,0,7);cx.fill();
+ cx.strokeStyle='rgba(103,232,249,.28)';cx.lineWidth=dpr;cx.beginPath();for(var lo=-180;lo<180;lo+=30){var pen=false;for(var la=-90;la<=90;la+=6){var v=V(la,lo);pr(v[0],v[1],v[2]);if(Z>0){pen?cx.lineTo(sx(),sy()):cx.moveTo(sx(),sy());pen=true}else pen=false}}
+ for(var la2=-60;la2<=60;la2+=30){var pen2=false;for(var lo2=0;lo2<=360;lo2+=6){var w=V(la2,lo2);pr(w[0],w[1],w[2]);if(Z>0){pen2?cx.lineTo(sx(),sy()):cx.moveTo(sx(),sy());pen2=true}else pen2=false}}cx.stroke();
+ var sc=Math.sin(t*.0005)*55;cx.strokeStyle='rgba(52,211,153,.75)';cx.lineWidth=1.6*dpr;cx.beginPath();var pen3=false;for(var lo3=0;lo3<=360;lo3+=4){var u=V(sc,lo3);pr(u[0],u[1],u[2]);if(Z>0){pen3?cx.lineTo(sx(),sy()):cx.moveTo(sx(),sy());pen3=true}else pen3=false}cx.stroke();
+ cx.fillStyle='#5EEAD4';for(var k=0;k<L.length;k+=3){pr(L[k],L[k+1],L[k+2]);if(Z>0){cx.globalAlpha=.25+.75*Z;var s=(1+1.1*Z)*dpr;cx.fillRect(sx()-s/2,sy()-s/2,s,s);}}cx.globalAlpha=1;
+ ARCS.forEach(function(a,ai){cx.strokeStyle='rgba(52,211,153,.6)';cx.lineWidth=1.3*dpr;cx.beginPath();var pe=false;a.forEach(function(q){pr(q[0],q[1],q[2]);if(Z>-.02){pe?cx.lineTo(sx(),sy()):cx.moveTo(sx(),sy());pe=true}else pe=false});cx.stroke();
+  var f=((t*.00022+ai*.33)%1)*30,q=a[Math.floor(f)];pr(q[0],q[1],q[2]);if(Z>0){cx.fillStyle='#fff';cx.beginPath();cx.arc(sx(),sy(),2.6*dpr,0,7);cx.fill();}});
+ PTS.forEach(function(p,pi){var v=V(p[0],p[1]);pr(v[0],v[1],v[2]);if(Z<=0)return;var x=sx(),y=sy(),ph=((t+pi*400)%1800)/1800;
+  cx.strokeStyle='rgba(110,231,183,'+(.8*(1-ph))+')';cx.lineWidth=1.4*dpr;cx.beginPath();cx.arc(x,y,(3+ph*15)*dpr,0,7);cx.stroke();
+  cx.fillStyle=pi?'#a7f3d0':'#fff';cx.beginPath();cx.arc(x,y,(pi?2.4:3.6)*dpr,0,7);cx.fill();
+  if(p[2]&&Z>.25){cx.font='600 '+11*dpr+'px ui-monospace,Menlo,monospace';cx.fillStyle='rgba(231,242,248,'+Z+')';cx.fillText(p[2],x+9*dpr,y+4*dpr);}});
+ ORB.forEach(function(o){path(orb(o),140,true,'rgba(134,239,172,.5)',1.1*dpr)});sats(t,true);
+ cx.strokeStyle='rgba(103,232,249,.55)';cx.lineWidth=1.5*dpr;cx.beginPath();cx.arc(ox,oy,R,0,7);cx.stroke();
+ if(ro&&(fr++%8==0)){var lo4=((l0/D+540)%360)-180,la4=p0/D;ro.innerHTML='LAT '+Math.abs(la4).toFixed(1)+'&deg;'+(la4>=0?'N':'S')+'<br>LON '+Math.abs(lo4).toFixed(1)+'&deg;'+(lo4>=0?'E':'W')+'<br>ORBITS 3 &middot; NODES '+PTS.length;}}
+function size(){cv.parentNode.classList.add('ok');dpr=Math.min(window.devicePixelRatio||1,2);var w=cv.clientWidth||400;cv.width=Math.round(w*dpr);cv.height=Math.round(w*dpr);draw(last);}
+function loop(now){if(!run)return;var dt=Math.min(.05,(now-(loop.p||now))/1000);loop.p=now;last=now;
+ if(!drag){l0+=vl*dt;vl+=(auto-vl)*Math.min(1,dt*.9);}draw(now);requestAnimationFrame(loop);}
+function go(){if(RM||run||!vis||document.hidden)return;run=true;loop.p=0;requestAnimationFrame(loop);}
+function stop(){run=false;}
+cv.addEventListener('pointerdown',function(e){drag=1;lx=e.clientX;ly=e.clientY;lt=e.timeStamp;try{cv.setPointerCapture(e.pointerId)}catch(_){}});
+cv.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-lx,dy=e.clientY-ly,dt=Math.max(1,e.timeStamp-lt)/1000;l0-=dx*.006;p0=Math.max(-1,Math.min(1,p0+dy*.005));vl=-dx*.006/dt*.5;lx=e.clientX;ly=e.clientY;lt=e.timeStamp;if(RM)draw(last);});
+['pointerup','pointercancel'].forEach(function(n){cv.addEventListener(n,function(){drag=0;if(Math.abs(vl)>3)vl=vl>0?3:-3;})});
+if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting;vis?go():stop();}).observe(cv);
+document.addEventListener('visibilitychange',function(){document.hidden?stop():go();});
+addEventListener('resize',size);size();go();
+})();
+
+(function(){ /* ---- zoning: animated parcel classification ---- */
+var svg=document.getElementById('zsvg');if(!svg)return;
+var s=7,rnd=function(){s=(s*16807)%2147483647;return s/2147483647},C=8,R=5,w=80,h=80,j=11,V=[];
+for(var r=0;r<=R;r++){V[r]=[];for(var c=0;c<=C;c++)V[r][c]=[c*w+(c%C?(rnd()-.5)*2*j:0),r*h+(r%R?(rnd()-.5)*2*j:0)];}
+function mix(a,b,t){return[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t]}
+var o='<rect class="bg" width="640" height="400"/><path d="M-10 290 C150 210 300 330 650 180" fill="none" stroke="rgba(56,140,255,.35)" stroke-width="12"/>';
+for(r=0;r<R;r++)for(c=0;c<C;c++){var q=[V[r][c],V[r][c+1],V[r+1][c+1],V[r+1][c]],v=Math.sin(c*.85+r*.6)+Math.cos(r*1.4-c*.45),z=v>1.1?'C':v>.4?'R2':v<-1.2?'OS':v<-.6?'I':'R1';
+ if(c>=6&&r==0)z='OS';if(c<=1&&r==4)z='I';if(c==3&&r==2)z='C';
+ var m1=mix(q[0],q[1],.5),m2=mix(q[3],q[2],.5),parts=[[q[0],m1,m2,q[3]],[m1,q[1],q[2],m2]];
+ parts.forEach(function(P,k){var cn=[(P[0][0]+P[1][0]+P[2][0]+P[3][0])/4,(P[0][1]+P[1][1]+P[2][1]+P[3][1])/4];
+  o+='<polygon class="zp z-'+z+'" style="--d:'+((c+k*.5)*.45).toFixed(2)+'s" points="'+P.map(function(p){var t=mix(p,cn,.09);return t[0].toFixed(1)+','+t[1].toFixed(1)}).join(' ')+'"/>';});}
+svg.innerHTML=o;
+var ZN=[['R1','R-1 Residential'],['R2','R-2 Multi-family'],['C','C-1 Commercial'],['I','I-1 Industrial'],['OS','OS Open space']],lg=document.getElementById('zleg'),lock=null;
+ZN.forEach(function(z){var li=document.createElement('li'),b=document.createElement('button');b.type='button';b.className='z-'+z[0];b.setAttribute('aria-pressed','false');b.innerHTML='<i></i>'+z[1];
+ function on(){svg.dataset.f=z[0]}function off(){if(lock)svg.dataset.f=lock;else delete svg.dataset.f}
+ b.addEventListener('mouseenter',on);b.addEventListener('focus',on);b.addEventListener('mouseleave',off);b.addEventListener('blur',off);
+ b.addEventListener('click',function(){lock=lock===z[0]?null:z[0];[].forEach.call(lg.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed','false')});if(lock)b.setAttribute('aria-pressed','true');off();});
+ li.appendChild(b);lg.appendChild(li);});
+})();
+
+(function(){ /* ---- remote sensing: procedural scene, index layers ---- */
+var cv=document.getElementById('rs');if(!cv)return;var W=200,H=125,cx=cv.getContext('2d'),RM=matchMedia('(prefers-reduced-motion: reduce)').matches;cv.width=W;cv.height=H;
+function VN(seed){var G=[],s=seed;for(var i=0;i<1089;i++){s=(s*16807)%2147483647;G.push(s/2147483647)}
+ return function(x,y){var xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf),g=function(a,b){return G[((yi+b)&31)*33+((xi+a)&31)]};return g(0,0)*(1-u)*(1-v)+g(1,0)*u*(1-v)+g(0,1)*(1-u)*v+g(1,1)*u*v}}
+function fbm(f,x,y){return(f(x,y)*.5+f(x*2,y*2)*.25+f(x*4,y*4)*.125+f(x*8,y*8)*.0625)/.9375}
+var n1=VN(3),n2=VN(17),n3=VN(29),cl=function(x){return x<0?0:x>1?1:x},N=W*H,wd=new Float32Array(N),vg=new Float32Array(N),bt=new Float32Array(N),tx=new Float32Array(N);
+for(var j=0;j<H;j++)for(var i=0;i<W;i++){var k=j*W+i,u=i/W*4,v=j/H*2.5,el=fbm(n1,u,v);
+ var w=cl((.42-el)/.07),ve=fbm(n2,u*1.3+5,v*1.3),ci=Math.exp(-((i-62)*(i-62)+(j-72)*(j-72))/800)+.8*Math.exp(-((i-142)*(i-142)+(j-40)*(j-40))/420),b=cl(ci*1.15+(fbm(n3,u*3,v*3)-.5)*.5)*(1-w);
+ wd[k]=w;vg[k]=cl(ve*1.25-.1)*(1-b*.9)*(1-w);bt[k]=b>.35?b:b*.4;tx[k]=fbm(n3,u*6,v*6);}
+function ramp(S,t){t=cl(t);for(var a=1;a<S.length;a++)if(t<=S[a][0]){var p=S[a-1],q=S[a],f=(t-p[0])/(q[0]-p[0]);return[p[1][0]+(q[1][0]-p[1][0])*f,p[1][1]+(q[1][1]-p[1][1])*f,p[1][2]+(q[1][2]-p[1][2])*f]}return S[S.length-1][1]}
+var RP={ndvi:[[0,[120,80,45]],[.35,[232,212,90]],[.7,[92,190,72]],[1,[8,105,48]]],ndbi:[[0,[18,36,96]],[.5,[172,58,170]],[1,[255,176,60]]],ndwi:[[0,[176,146,100]],[.5,[110,196,230]],[1,[20,66,200]]],lst:[[0,[24,10,96]],[.35,[170,30,112]],[.7,[250,122,40]],[1,[252,232,112]]]};
+var LC=[['Water',[59,130,246]],['Forest',[22,120,60]],['Cropland',[163,230,53]],['Built-up',[244,63,94]],['Bare',[214,184,138]]];
+function px(mode,k){var w=wd[k],v=vg[k],b=bt[k],t=tx[k];
+ if(mode=='ndvi')return ramp(RP.ndvi,w>.5?0:(.1+.75*v-.2*b));
+ if(mode=='ndbi')return ramp(RP.ndbi,.15+.7*b+.25*(1-v)-.4*w);
+ if(mode=='ndwi')return ramp(RP.ndwi,.28+.62*w-.22*v-.12*b);
+ if(mode=='lst')return ramp(RP.lst,(24+17*b+7*(1-v)-9*w+3*t-14)/36);
+ if(mode=='lulc')return LC[w>.5?0:b>.4?3:v>.62?1:v>.42?2:4][1];
+ var n=.85+.3*t;if(w>.5)return[18*n,62*n,112*n];if(b>.4)return[(150+30*t),(150+25*t),(152+20*t)];
+ return[(50+110*(1-v))*n,(95+60*v+30*(1-v))*n,(52+50*(1-v))*n];}
+var M=['rgb','ndvi','ndbi','ndwi','lst','lulc'],IM={};
+M.forEach(function(m){var c=document.createElement('canvas');c.width=W;c.height=H;var x=c.getContext('2d'),d=x.createImageData(W,H);for(var k=0;k<N;k++){var p=px(m,k);d.data[k*4]=p[0];d.data[k*4+1]=p[1];d.data[k*4+2]=p[2];d.data[k*4+3]=255}x.putImageData(d,0,0);IM[m]=c;});
+var NOTE={rgb:'True-colour composite, the way a Sentinel-2 or Landsat scene looks to the eye.',ndvi:'NDVI = (NIR - Red) / (NIR + Red). Shows vegetation vigour: dense, healthy vegetation scores high.',ndbi:'NDBI = (SWIR - NIR) / (SWIR + NIR). Highlights built-up and bare surfaces.',ndwi:'NDWI = (Green - NIR) / (Green + NIR). Highlights open water.',lst:'Land surface temperature from the thermal band. Built-up surfaces run hotter than vegetation and water.',lulc:'Supervised classification into water, forest, cropland, built-up and bare land.'},
+ LO={ndvi:['low','high'],ndbi:['low','high'],ndwi:['dry','water'],lst:['cooler','hotter']};
+var cur='rgb',tm,auto=!RM,note=document.getElementById('rsnote'),leg=document.getElementById('rsleg'),lab=document.getElementById('rsl'),chips=[].slice.call(document.querySelectorAll('#rschips button'));
+function css(a){return'rgb('+a.map(Math.round).join(',')+')'}
+function show(m,first){var from=cur;cur=m;chips.forEach(function(b){b.classList.toggle('on',b.dataset.m==m)});note.textContent=NOTE[m];
+ if(m=='lulc'){leg.className='cat';leg.innerHTML=LC.map(function(c){return'<span><i style="background:'+css(c[1])+'"></i>'+c[0]+'</span>'}).join('');lab.innerHTML=''}
+ else if(m=='rgb'){leg.className='';leg.style.background='linear-gradient(90deg,#123e70,#3f8f4a,#969690,#b89a6c)';leg.innerHTML='';lab.innerHTML='<span>water</span><span>vegetation</span><span>built-up</span><span>bare</span>'}
+ else{leg.className='';leg.innerHTML='';leg.style.background='linear-gradient(90deg,'+RP[m].map(function(s){return css(s[1])}).join(',')+')';lab.innerHTML='<span>'+LO[m][0]+'</span><span>'+LO[m][1]+'</span>'}
+ if(first||RM){cx.drawImage(IM[m],0,0);return}var t0=performance.now();(function st(n){var a=Math.min(1,(n-t0)/450);cx.globalAlpha=1;cx.drawImage(IM[from],0,0);cx.globalAlpha=a;cx.drawImage(IM[m],0,0);cx.globalAlpha=1;if(a<1)requestAnimationFrame(st)})(t0);}
+chips.forEach(function(b){b.addEventListener('click',function(){auto=false;show(b.dataset.m)})});
+show('rgb',true);
+if(auto)setInterval(function(){if(auto&&!document.hidden)show(M[(M.indexOf(cur)+1)%M.length])},3600);
+})();
+
+(function(){ /* ---- automation: connected nodes, data particles, QA log ---- */
+var box=document.getElementById('flow');if(!box)return;
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,
+N=[['GIS portals','REST services','Municipal and county GIS portals, ArcGIS REST Feature Services and web mapping platforms are the sources for current zoning and parcel data across the USA and Canada.'],
+['Discover','Python scraping','A scraping utility finds city-level GIS directories, mapping portals and REST services, and documents updated source links for 2,000+ cities.'],
+['Extract','GeoJSON, GPKG','The REST downloader takes a service endpoint and exports the layer into local GeoJSON and GeoPackage files.'],
+['PostGIS','spatial SQL','PostGIS and QGIS handle local spatial database work: shapefile import, spatial intersections and selections, inserts, updates and deletes.'],
+['QA/QC','CRS, slivers, gaps','Python checks for CRS correction, geometry validation, zone-change detection, sliver and overlap identification, and attribute, spelling and missing-field errors.'],
+['Delivery','checked layers','Quality-assured zoning and parcel layers: 1,500+ maps digitized at 95%+ accuracy.']],
+info=document.getElementById('flowinfo'),cur=0,auto=!RM,vert=null,svg;
+function set(i){cur=i;[].forEach.call(box.querySelectorAll('.node'),function(n){n.classList.toggle('on',+n.dataset.i===i)});info.innerHTML='<h3>'+N[i][0]+'</h3><p>'+N[i][2]+'</p>';}
+function build(){var v=matchMedia('(max-width:700px)').matches;if(v===vert)return;vert=v;
+ var vw=v?340:1000,vh=v?820:170,nw=v?260:124,nh=84,P=N.map(function(_,i){return v?[vw/2,50+i*(nh+42)+nh/2]:[62+i*175,vh/2]}),h='<svg viewBox="0 0 '+vw+' '+vh+'" role="img" aria-label="Animated workflow from GIS portals to checked, delivered layers">';
+ for(var i=0;i<5;i++){var a=P[i],b=P[i+1],d=v?'M'+a[0]+' '+(a[1]+nh/2)+' L'+b[0]+' '+(b[1]-nh/2):'M'+(a[0]+nw/2)+' '+a[1]+' L'+(b[0]-nw/2)+' '+b[1];
+  h+='<path class="edge" d="'+d+'"/>';for(var k=0;k<2;k++)h+='<circle class="pt" r="3.6"><animateMotion dur="2.4s" begin="-'+(k*1.2)+'s" repeatCount="indefinite" path="'+d+'"/></circle>';}
+ N.forEach(function(n,i){var p=P[i];h+='<g class="node" tabindex="0" role="button" data-i="'+i+'" aria-label="'+n[0]+'"><rect x="'+(p[0]-nw/2)+'" y="'+(p[1]-nh/2)+'" width="'+nw+'" height="'+nh+'" rx="12"/><text class="nm" x="'+(p[0]-nw/2+12)+'" y="'+(p[1]-nh/2+20)+'">0'+(i+1)+'</text><text class="t1" x="'+p[0]+'" y="'+(p[1]+2)+'">'+n[0]+'</text><text class="t2" x="'+p[0]+'" y="'+(p[1]+24)+'">'+n[1]+'</text></g>';});
+ box.innerHTML=h+'</svg>';svg=box.firstChild;if(RM&&svg.pauseAnimations)svg.pauseAnimations();
+ [].forEach.call(box.querySelectorAll('.node'),function(n){var f=function(){auto=false;set(+n.dataset.i)};n.addEventListener('mouseenter',f);n.addEventListener('focus',f);n.addEventListener('click',f);});set(cur);}
+build();addEventListener('resize',build);
+if(auto)setInterval(function(){if(auto&&!document.hidden)set((cur+1)%N.length)},3200);
+var lg=document.getElementById('qalog');if(lg){var LN=['<b>&rsaquo;</b> load layer: zoning_parcels.gpkg','<b>&#10003;</b> CRS verified against target','<b>&#10003;</b> 0 invalid geometries','<em>!</em> 3 slivers flagged for review','<b>&#10003;</b> overlaps: 0','<b>&#10003;</b> missing fields: 0','<b>&#10003;</b> zone codes match ordinance','<b>&#10003;</b> export GeoJSON + GeoPackage'],q=0,rows=[];
+ function paint(){lg.innerHTML='<small>Illustrative QA run</small>'+rows.join('<br>')}
+ if(RM){rows=LN;paint();}else setInterval(function(){if(document.hidden)return;rows.push(LN[q++%LN.length]);if(rows.length>7)rows.shift();paint();},1100);}
+})();
+
+(function(){ /* ---- scroll reveal, counters, parallax ---- */
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var T=document.querySelectorAll('section:not(.hero) h2,section:not(.hero) .lede,.job,.proj,.ev,.skills>div,.glass,.certs figure,details.res,.edu li,.about-text p,.stats div,.contact dl,.code li,.lab .real h3');
+[].forEach.call(T,function(e,i){if(e.classList.contains('rv'))return;e.classList.add('rv');e.style.setProperty('--i',i%4);});
+function count(el){var m=/^([\d,]+)(.*)$/.exec(el.textContent.trim());if(!m||m[1].replace(/,/g,'')==='2023'||RM)return;var to=+m[1].replace(/,/g,''),t0=performance.now();
+ (function s(n){var p=Math.min(1,(n-t0)/1300),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e).toLocaleString('en-US')+m[2];if(p<1)requestAnimationFrame(s)})(t0);}
+if(!('IntersectionObserver' in window)||RM){[].forEach.call(document.querySelectorAll('.rv'),function(e){e.classList.add('in')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var d=e.target.querySelector&&e.target.querySelector('dt');if(d)count(d);io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+ [].forEach.call(document.querySelectorAll('.rv'),function(e){io.observe(e)});}
+if(!RM){var tk=0,root=document.documentElement;addEventListener('scroll',function(){if(tk)return;tk=1;requestAnimationFrame(function(){var y=scrollY;root.style.setProperty('--sy',(-y*.06)+'px');root.style.setProperty('--gy',(y<900?y*.08:72)+'px');tk=0})},{passive:true});}
+})();
+
+</script>
+</body>
+</html>
